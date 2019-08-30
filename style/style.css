@@ -1,0 +1,70 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  width: 100%;
+  height: 8vh;
+}
+
+header img {
+  height: 8vh;
+}
+
+main {
+  padding-top: 10vh;
+  background-color: #ffcc00;
+}
+
+main img {
+  width: auto;
+  height: 90vh;
+}
+
+@media screen and (orientation: portrait) {
+  main img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+main .container {
+  right: 45vw;
+  height: 90vh;
+  border: 1px solid red;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media screen and (orientation: portrait) {
+  main .container {
+    height: 66.640625vw;
+  }
+}
+
+main .skewShapeBack {
+  width: 100%;
+  height: 100%;
+  background-color: #ffcc0080;
+  position: relative;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  right: 0px;
+}
+
+main .skewShape {
+  width: 100%;
+  height: 100%;
+  background-color: #ffcc00;
+  position: relative;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  right: 10vw;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,5 @@
+@mixin mQportrait {
+    @media screen and (orientation: portrait){
+        @content;
+    }
+}

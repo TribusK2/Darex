@@ -1,0 +1,60 @@
+@import "mixins";
+@import "variables";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    width: 100%;
+    height: $topSpace;
+    img{
+        height: ($topSpace);
+    }
+}
+
+main{
+    padding-top: ($topSpace + 2vh);
+    background-color: $skewShapeColor;
+    img{
+        width: auto;
+        height: (100vh - ($topSpace + 2vh));
+        @include mQportrait{
+            width: 100%;
+            height: auto;
+        }    
+    }
+    .container{
+        right: 45vw;
+        height: (100vh - ($topSpace + 2vh)); 
+        border: 1px solid red;
+        position: absolute;
+        z-index: 1;
+        overflow: hidden;
+        @include mQportrait{
+            height: 66.640625vw;
+        }
+    }
+    .skewShapeBack{
+        width: 100%;
+        height: 100%;
+        background-color: $skewShapeColorOpacity;
+        position: relative;
+        transform: skew(-20deg);
+        transform-origin: 0 0;
+        right: 0px;
+    }
+    .skewShape{
+        width: 100%;
+        height: 100%;
+        background-color: $skewShapeColor;
+        position: relative;
+        transform: skew(-20deg);
+        transform-origin: 0 0;
+        right: 10vw;
+    }
+}
+
+    
+
+
