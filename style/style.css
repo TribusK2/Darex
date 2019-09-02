@@ -37,9 +37,9 @@ main img {
 }
 
 main #arrow {
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
   position: absolute;
   bottom: 2vh;
   left: 10vw;
@@ -67,25 +67,25 @@ main #arrow:hover i {
 
 @media screen and (min-width: 1441px) {
   main #arrow {
-    width: 180px;
-    height: 180px;
-    border-radius: 90px;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
-  main #arrow {
     width: 120px;
     height: 120px;
     border-radius: 60px;
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  main #arrow {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+  }
+}
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   main #arrow {
-    width: 90px;
-    height: 90px;
-    border-radius: 45px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
   }
 }
 
@@ -95,8 +95,8 @@ main #arrow:hover i {
   }
 }
 
-main i {
-  font-size: 40px;
+main #section1 i {
+  font-size: 26.66667px;
   line-height: 1;
   color: #ffcc00;
   -webkit-transition: all 0.3s linear;
@@ -104,20 +104,51 @@ main i {
 }
 
 @media screen and (min-width: 1441px) {
-  main i {
-    font-size: 120px;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
-  main i {
+  main #section1 i {
     font-size: 80px;
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  main #section1 i {
+    font-size: 53.33333px;
+  }
+}
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  main i {
+  main #section1 i {
+    font-size: 40px;
+  }
+}
+
+main #section2 i {
+  font-size: 50px;
+  line-height: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+@media screen and (min-width: 1441px) {
+  main #section2 i {
+    font-size: 92.30769px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  main #section2 i {
     font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  main #section2 i {
+    font-size: 61.53846px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  main #section2 i {
+    font-size: 46.15385px;
   }
 }
 
@@ -219,6 +250,14 @@ main .welcomeBox, main .welcomeBox--solid {
   position: absolute;
 }
 
+@media screen and (orientation: portrait) {
+  main .welcomeBox, main .welcomeBox--solid {
+    width: 100vw;
+    -webkit-transform: translateY(14vh);
+            transform: translateY(14vh);
+  }
+}
+
 @media screen and (orientation: landscape) {
   main .welcomeBox, main .welcomeBox--solid {
     height: 91vh;
@@ -238,5 +277,28 @@ main .welcomeBox--solid {
             transform: skewX(-25deg) translateX(-8vw);
     right: 15vw;
   }
+}
+
+@media screen and (orientation: portrait) {
+  main .welcomeBox--solid {
+    display: none;
+  }
+}
+
+main .sectionBoxWhite {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  left: -50vw;
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+}
+
+main .box1 {
+  background-color: #f1f1f1;
+}
+
+main .box2 {
+  background-color: #f1eace;
 }
 /*# sourceMappingURL=style.css.map */

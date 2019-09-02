@@ -71,20 +71,40 @@ main{
             left: 13vw;
         }
     }
-
-    i{
-        font-size: $btnSize/1.5;
-        line-height: 1;
-        color: $skewShapeColor;
-        transition: all $btnChangeSpeed linear;
-        @include mQfullHD{
-            font-size: $btnSizeFullHD/1.5;
+    #section1{
+        i{
+            font-size: $btnSize/1.5;
+            line-height: 1;
+            color: $skewShapeColor;
+            transition: all $btnChangeSpeed linear;
+            @include mQfullHD{
+                font-size: $btnSizeFullHD/1.5;
+            }
+            @include mQlaptop{
+                font-size: $btnSizeLaptop/1.5;
+            }
+            @include mQtablet{
+                font-size: $btnSizeTablet/1.5;
+            }
         }
-        @include mQlaptop{
-            font-size: $btnSizeLaptop/1.5;
-        }
-        @include mQtablet{
-            font-size: $btnSizeTablet/1.5;
+    }
+    #section2{
+        i{
+            font-size: $btnSize/0.8;
+            line-height: 1;
+            transition: all $btnChangeSpeed linear;
+            @include mQfullHD{
+                font-size: $btnSizeFullHD/1.3;
+            }
+            @include mQportrait{
+                font-size: $btnSizeFullHD/2;
+            }
+            @include mQlaptop{
+                font-size: $btnSizeLaptop/1.3;
+            }
+            @include mQtablet{
+                font-size: $btnSizeTablet/1.3;
+            }
         }
     }
 
@@ -146,6 +166,10 @@ main{
         width: 40vw;
         height: 100%;
         position: absolute;
+        @include mQportrait{
+            width: 100vw;
+            transform: translateY(14vh);
+        }
         @include mQlandscape{
             height: (100vh - ($topSpace));
             transform: skewX(-25deg);
@@ -158,7 +182,23 @@ main{
                 transform: skewX(-25deg) translateX(-8vw);
                 right: 15vw;
             }
+            @include mQportrait{
+                display: none;
+            }
         }
+    }
+    .sectionBoxWhite{
+        height: 100%;
+        width: 100vw;
+        position: absolute;
+        left: -50vw;
+        transform: skewX(20deg)
+    }
+    .box1{
+        background-color: $box1Color;
+    }
+    .box2{
+        background-color: $box2Color;
     }
 }
 
