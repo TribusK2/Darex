@@ -121,6 +121,10 @@ main #section1 i {
   }
 }
 
+main #section2 {
+  overflow: hidden;
+}
+
 main #section2 i {
   font-size: 50px;
   line-height: 1;
@@ -286,12 +290,40 @@ main .welcomeBox--solid {
 }
 
 main .sectionBoxWhite {
-  height: 100%;
-  width: 100vw;
+  height: 200%;
+  width: 100%;
   position: absolute;
-  left: -50vw;
-  -webkit-transform: skewX(20deg);
-          transform: skewX(20deg);
+  left: -40vw;
+  -webkit-transform: skewX(20deg) scaleX(1.5) translateX(-100px);
+          transform: skewX(20deg) scaleX(1.5) translateX(-100px);
+}
+
+@media screen and (orientation: portrait) {
+  main .sectionBoxWhite {
+    -webkit-transform: skewX(20deg) scaleX(1.5) translateX(-70px);
+            transform: skewX(20deg) scaleX(1.5) translateX(-70px);
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  main .sectionBoxWhite {
+    -webkit-transform: skewX(20deg) scaleX(1.5) translateX(-170px);
+            transform: skewX(20deg) scaleX(1.5) translateX(-170px);
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  main .sectionBoxWhite {
+    -webkit-transform: skewX(20deg) scaleX(1.5) translateX(-250px);
+            transform: skewX(20deg) scaleX(1.5) translateX(-250px);
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  main .sectionBoxWhite {
+    -webkit-transform: skewX(20deg) scaleX(1.5) translateX(-350px);
+            transform: skewX(20deg) scaleX(1.5) translateX(-350px);
+  }
 }
 
 main .box1 {

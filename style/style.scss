@@ -89,6 +89,7 @@ main{
         }
     }
     #section2{
+        overflow: hidden;
         i{
             font-size: $btnSize/0.8;
             line-height: 1;
@@ -188,11 +189,23 @@ main{
         }
     }
     .sectionBoxWhite{
-        height: 100%;
-        width: 100vw;
+        height: 200%;
+        width: 100%;
         position: absolute;
-        left: -50vw;
-        transform: skewX(20deg)
+        left: -40vw;
+        transform: skewX(20deg) scaleX(1.5) translateX(-100px);
+        @include mQportrait{
+            transform: skewX(20deg) scaleX(1.5) translateX(-70px);
+        }
+        @include mQtablet{
+            transform: skewX(20deg) scaleX(1.5) translateX(-170px);
+        }
+        @include mQlaptop{
+            transform: skewX(20deg) scaleX(1.5) translateX(-250px);
+        }
+        @include mQfullHD{
+            transform: skewX(20deg) scaleX(1.5) translateX(-350px);
+        }
     }
     .box1{
         background-color: $box1Color;
