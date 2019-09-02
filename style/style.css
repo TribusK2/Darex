@@ -37,7 +37,7 @@ main img {
 }
 
 main #welcomeWraper {
-  width: 55vw;
+  width: 65vw;
 }
 
 @media screen and (orientation: landscape) {
@@ -48,22 +48,75 @@ main #welcomeWraper {
   }
 }
 
-@media screen and (min-aspect-ratio: 8 / 4) {
+@media screen and (min-aspect-ratio: 82 / 42) {
   main #welcomeWraper {
-    right: 35vw;
+    right: 30vw;
   }
 }
 
 main #welcomeText {
   z-index: 1;
+  left: -12vw;
 }
 
 @media screen and (orientation: landscape) {
   main #welcomeText {
     text-align: left !important;
     position: relative;
-    top: 20px;
-    left: -50px;
+    top: 4vh;
+    left: -14vw;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  main #welcomeText {
+    left: -10vw;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  main #welcomeText {
+    left: -10vw;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  main #welcomeText {
+    left: -10vw;
+  }
+}
+
+main #welcomeText h1 {
+  position: relative;
+}
+
+@media screen and (min-aspect-ratio: 82 / 42) {
+  main #welcomeText h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  main #welcomeText h1 {
+    padding: 1vh 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  main #welcomeText h1 {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  main #welcomeText h1 {
+    font-size: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  main #welcomeText h1 {
+    font-size: 4.5rem;
   }
 }
 
@@ -91,7 +144,7 @@ main .welcomeBox--solid {
   main .welcomeBox--solid {
     -webkit-transform: skewX(-25deg) translateX(-8vw);
             transform: skewX(-25deg) translateX(-8vw);
-    right: 10vw;
+    right: 15vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

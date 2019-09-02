@@ -14,7 +14,17 @@
     }
 }
 @mixin mQpanoram{
-    @media screen and (min-aspect-ratio: 8/4){
+    @media screen and (min-aspect-ratio: 82/42){
+        @content;
+    }
+}
+@mixin mQlaptop{ // from Bootstrap xl to @mixin mQfullHD
+    @media screen and (min-width: 1200px) and (max-width: 1440px){
+        @content;
+    }
+}
+@mixin mQtablet{ // from Bootstrap lg to Bootstrap xl
+    @media screen and (min-width: 992px) and (max-width: 1199px){
         @content;
     }
 }

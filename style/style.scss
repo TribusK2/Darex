@@ -31,7 +31,7 @@ main{
         }    
     }
     #welcomeWraper{
-        width: 55vw;
+        width: 65vw;
         // right: 40vw;
         @include mQlandscape{
             position: absolute;
@@ -39,17 +39,46 @@ main{
             height: (100vh - ($topSpace));
         }
         @include mQpanoram{
-            right: 35vw;
+            right: 30vw;
         }
     }
     #welcomeText{
         z-index: 1;
+        left: -12vw;
         @include mQlandscape{
             text-align: left !important;
             position: relative;
-            top: 20px;
-            left: -50px;
+            top: 4vh;
+            left: -14vw;
         }
+        @include mQfullHD{
+            left: -10vw;
+        }
+        @include mQlaptop{
+            left: -10vw;
+        }
+        @include mQtablet{
+            left: -10vw;
+        }
+        h1{ 
+            position: relative;
+            @include mQpanoram{
+                font-size: 3rem;
+            }
+            @include mQlandscape{
+                padding: 1vh 0;
+            }
+            @include mQfullHD{
+                font-size: 8rem;
+            }
+            @include mQlaptop{
+                font-size: 5.5rem;
+            }
+            @include mQtablet{
+                font-size: 4.5rem;
+            }
+        }
+        
     }
     .welcomeBox{
         background-color: $skewShapeColorOpacity;
@@ -66,17 +95,10 @@ main{
             width: 100vw;
             @include mQlandscape{
                 transform: skewX(-25deg) translateX(-8vw);
-                right: 10vw;
+                right: 15vw;
             }
         }
     }
-    // .welcomeCoverBox{
-    //     border: 1px solid red;
-    //     background-color: $skewShapeColor;
-    //     height: 100%;
-    //     right: 50px;
-    //     position: relative;
-    // }
 }
 
     
