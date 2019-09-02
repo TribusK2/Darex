@@ -5,21 +5,28 @@
 
 header {
   width: 100%;
-  height: 8vh;
+  height: 9vh;
 }
 
 header img {
-  height: 8vh;
+  height: 7vh;
+}
+
+@media screen and (min-width: 1441px) {
+  header a {
+    font-size: 2rem;
+  }
 }
 
 main {
-  padding-top: 10vh;
+  padding-top: 9vh;
   background-color: #ffcc00;
 }
 
 main img {
   width: auto;
-  height: 90vh;
+  height: 91vh;
+  float: right;
 }
 
 @media screen and (orientation: portrait) {
@@ -29,42 +36,62 @@ main img {
   }
 }
 
-main .container {
-  right: 45vw;
-  height: 90vh;
-  border: 1px solid red;
-  position: absolute;
-  z-index: 1;
-  overflow: hidden;
+main #welcomeWraper {
+  width: 55vw;
 }
 
-@media screen and (orientation: portrait) {
-  main .container {
-    height: 66.640625vw;
+@media screen and (orientation: landscape) {
+  main #welcomeWraper {
+    position: absolute;
+    padding-top: 9vh;
+    height: 91vh;
   }
 }
 
-main .skewShapeBack {
-  width: 100%;
-  height: 100%;
-  background-color: #ffcc0080;
-  position: relative;
-  -webkit-transform: skew(-20deg);
-          transform: skew(-20deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  right: 0px;
+@media screen and (min-aspect-ratio: 8 / 4) {
+  main #welcomeWraper {
+    right: 35vw;
+  }
 }
 
-main .skewShape {
-  width: 100%;
+main #welcomeText {
+  z-index: 1;
+}
+
+@media screen and (orientation: landscape) {
+  main #welcomeText {
+    text-align: left !important;
+    position: relative;
+    top: 20px;
+    left: -50px;
+  }
+}
+
+main .welcomeBox, main .welcomeBox--solid {
+  background-color: #ffcc0080;
+  width: 40vw;
   height: 100%;
+  position: absolute;
+}
+
+@media screen and (orientation: landscape) {
+  main .welcomeBox, main .welcomeBox--solid {
+    height: 91vh;
+    -webkit-transform: skewX(-25deg);
+            transform: skewX(-25deg);
+  }
+}
+
+main .welcomeBox--solid {
   background-color: #ffcc00;
-  position: relative;
-  -webkit-transform: skew(-20deg);
-          transform: skew(-20deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  right: 10vw;
+  width: 100vw;
+}
+
+@media screen and (orientation: landscape) {
+  main .welcomeBox--solid {
+    -webkit-transform: skewX(-25deg) translateX(-8vw);
+            transform: skewX(-25deg) translateX(-8vw);
+    right: 10vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

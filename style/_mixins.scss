@@ -3,3 +3,23 @@
         @content;
     }
 }
+@mixin mQfullHD{
+    @media screen and (min-width: 1441px){
+        @content;
+    }
+}
+@mixin mQlandscape{
+    @media screen and (orientation: landscape){
+        @content;
+    }
+}
+@mixin mQpanoram{
+    @media screen and (min-aspect-ratio: 8/4){
+        @content;
+    }
+}
+// @mixin clearFix {
+//     content: "";
+//     clear: both;
+//     display: block;
+// }
