@@ -36,6 +36,91 @@ main img {
   }
 }
 
+main #arrow {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 2vh;
+  left: 10vw;
+  z-index: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+main #arrow:hover {
+  background-color: #ffcc00 !important;
+}
+
+main #arrow:hover i {
+  color: black !important;
+}
+
+@media screen and (orientation: portrait) {
+  main #arrow {
+    position: relative;
+    display: block;
+    bottom: 0px;
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  main #arrow {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  main #arrow {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  main #arrow {
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+  }
+}
+
+@media screen and (min-aspect-ratio: 82 / 42) {
+  main #arrow {
+    left: 13vw;
+  }
+}
+
+main i {
+  font-size: 40px;
+  line-height: 1;
+  color: #ffcc00;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+@media screen and (min-width: 1441px) {
+  main i {
+    font-size: 120px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  main i {
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  main i {
+    font-size: 60px;
+  }
+}
+
 main #welcomeWraper {
   width: 65vw;
 }
@@ -57,6 +142,13 @@ main #welcomeWraper {
 main #welcomeText {
   z-index: 1;
   left: -12vw;
+  height: 86vh;
+}
+
+@media screen and (orientation: portrait) {
+  main #welcomeText {
+    height: auto;
+  }
 }
 
 @media screen and (orientation: landscape) {

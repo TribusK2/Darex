@@ -30,9 +30,67 @@ main{
             height: auto;
         }    
     }
+
+    #arrow{
+        width: $btnSize;
+        height: $btnSize;
+        border-radius: $btnSize/2;
+        position: absolute;
+        bottom: 2vh;
+        left: 10vw;
+        z-index: 1;
+        transition: all $btnChangeSpeed linear;
+        &:hover{
+            background-color: $skewShapeColor !important;
+            i{
+                color: black !important;
+            }
+        }
+        @include mQportrait{
+            position: relative;
+            display: block;
+            bottom: 0px;
+            left: 0px;
+        }
+        @include mQfullHD{
+            width: $btnSizeFullHD;
+            height: $btnSizeFullHD;
+            border-radius: $btnSizeFullHD/2;
+        }
+        @include mQlaptop{
+            width: $btnSizeLaptop;
+            height: $btnSizeLaptop;
+            border-radius: $btnSizeLaptop/2;
+        }
+        @include mQtablet{
+            width: $btnSizeTablet;
+            height: $btnSizeTablet;
+            border-radius: $btnSizeTablet/2;
+        }
+        @include mQpanoram{
+            left: 13vw;
+        }
+    }
+
+    i{
+        font-size: $btnSize/1.5;
+        line-height: 1;
+        color: $skewShapeColor;
+        transition: all $btnChangeSpeed linear;
+        @include mQfullHD{
+            font-size: $btnSizeFullHD/1.5;
+        }
+        @include mQlaptop{
+            font-size: $btnSizeLaptop/1.5;
+        }
+        @include mQtablet{
+            font-size: $btnSizeTablet/1.5;
+        }
+    }
+
     #welcomeWraper{
         width: 65vw;
-        // right: 40vw;
+        // border: 1px solid blue;
         @include mQlandscape{
             position: absolute;
             padding-top: $topSpace;
@@ -45,6 +103,10 @@ main{
     #welcomeText{
         z-index: 1;
         left: -12vw;
+        height: (100vh - ($topSpace)-5);
+        @include mQportrait{
+            height: auto;
+        }
         @include mQlandscape{
             text-align: left !important;
             position: relative;
@@ -78,7 +140,6 @@ main{
                 font-size: 4.5rem;
             }
         }
-        
     }
     .welcomeBox{
         background-color: $skewShapeColorOpacity;
