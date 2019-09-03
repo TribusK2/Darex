@@ -4,7 +4,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider
     .when("/", {
         templateUrl : "main.html",
-        // controller : "appCtrl"
+        controller : "mainCtrl"
         }
     )
     .when("/references", {
@@ -17,10 +17,32 @@ myApp.config(['$routeProvider', function($routeProvider) {
         // controller : "appCtrl"
         }
     )
+    .otherwise({
+        redirectTo: '/'
+    });
 }]);
 
 myApp.controller('headerCtrl', ['$scope', '$location', function($scope, $location){
     $scope.isActive = function (viewLocation) {
         return viewLocation === $location.path();
     };
+    $scope.scrollTop = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+}]);
+
+myApp.controller('mainCtrl', ['$scope', function($scope){
+    $scope.scrollSection2 = function() {
+        let anchor = document.getElementById('section2');
+        if (anchor) {
+            window.scrollTo({
+                top: anchor.offsetTop,
+                behavior: 'smooth',
+            });
+        }
+    };
+    
 }]);
