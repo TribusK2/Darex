@@ -12,101 +12,39 @@
     <link rel="stylesheet" type="text/css" href="/icons/flaticon.css">
     <link rel="icon" href="./img/logo-short.jpg">
     <link rel="stylesheet" href="style/style.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script> -->
+    <script src="/cdn/angular.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.min.js"></script> -->
+    <script src="/cdn/route.js"></script>
+    <script src="/script/app.js"></script>
 </head>
-<body>
-    <header class="row fixed-top m-0 p-0">
+<body ng-app = myApp>
+    <header ng-controller="headerCtrl" class="row fixed-top m-0 p-0">
         <nav class="col navbar navbar-expand-lg navbar-light bg-light px-4">
-            <a class="navbar-brand p-0 m-0 pr-3" href="#"><img src="./img/logo.png" class="my-0 py-0" alt="Logo firmowe firmy Darex"></a>
+            <a class="navbar-brand p-0 m-0 pr-3" href="#!/"><img src="./img/logo.png" class="my-0 py-0" alt="Logo firmowe firmy Darex"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           
             <div class="collapse navbar-collapse" id="navbarToggler">
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-center font-weight-bold h4">
-                <li class="nav-item px-3 py-lg-0 active">
-                  <a class="nav-link text-uppercase py-lg-0" href="#">Home<span class="sr-only">(current)</span></a>
+                <li class="nav-item px-3 py-lg-0">
+                  <a class="nav-link text-uppercase py-lg-0" ng-class="{active: isActive('/')}" data-toggle="tab" href="#!/">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item px-3 py-lg-0">
-                  <a class="nav-link text-uppercase py-lg-0" href="#">Referencje</a>
+                  <a class="nav-link text-uppercase py-lg-0" ng-class="{active: isActive('/references')}" data-toggle="tab" href="#!/references">Referencje</a>
                 </li>
                 <li class="nav-item px-3 py-lg-0">
-                  <a class="nav-link text-uppercase py-lg-0" href="#">Kontakt</a>
+                  <a class="nav-link text-uppercase py-lg-0" ng-class="{active: isActive('/contact')}" data-toggle="tab" href="#!/contact">Kontakt</a>
                 </li>
               </ul>
             </div>
           </nav>
     </header>
 
-    <main>
-      <!-- welcome display -->
-      <section id="section1" class="row mx-0">
-        <div class="col px-0">
-
-          <div id="welcomeWraper" class="col p-0 m-0 d-flex justify-content-center mx-auto"> 
-            <div id="welcomeText" class="text-uppercase text-center pt-3">
-              <h1 class="text-secondary font-weight-bold">partner</h1>
-              <h1 class="text-dark font-weight-bold">twojego</h1>
-              <h1 class="text-secondary font-weight-bold">biznesu</h1>
-            </div>
-
-            <div class="welcomeBox p-0 m-0"></div>
-            <div class="welcomeBox--solid p-0 m-0"></div>
-          </div>
-
-          <button id="arrow" class="btn bg-dark mx-auto mb-3">
-            <a href="/#section2" class="row justify-content-center mx-auto btn-link-none text-decoration-none"><i class="flaticon-arrow"></i></a>
-          </button>
-          
-          <img src="./img/home-main.jpg" alt="Meżczyzna stojący na pomoście żurawia">
-          <a id="iconFacebook" href="#" class="btn-link-none text-decoration-none"><i class="flaticon-facebook text-light"></i></a>
-          
-        </div>
-      </section>
-      <!-- welcome display end -->
-
-      <!-- main content -->
-      <section id="section2" class="row mx-0">
-    
-        <div class="col-12 col-sm-11 row px-sm-1 justify-content-between mx-auto px-lg-5">
-          <div class="col-12 sectionBoxWhite bg-light"></div>
-          <div class="col-12 col-sm-6 pl-sm-0 col-lg-4 my-5 mb-lg-1">
-            <h2 class="h2 px-2 text-dark text-center mb-0 bg-light bg-md-none">
-              <span class="text-warning">Serwis</span><span class="text-secondary"> i </span>Konserwacja
-            </h2>
-            <p class="text-justify box1 p-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum reprehenderit provident dicta sit hic, excepturi dolorum corporis distinctio, accusantium quo exercitationem eveniet nostrum laborum, harum nesciunt minima quisquam nisi iusto!
-            </p>
-          </div>
-
-          <div class="col-12 col-sm-6 pr-sm-0 col-lg-4 my-5 mb-lg-1">
-            <h2 class="h2 px-2 text-uppercase text-light bg-dark text-center mb-0">
-              O nas
-            </h2>
-            <p class="text-justify box2 p-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum corporis tempora placeat deleniti. Esse totam, similique, provident quis facilis accusamus aliquid in doloribus cumque commodi maiores distinctio maxime? Delectus?
-            </p>
-          </div>
-
-        </div>
-        
-        <div class="col-12 row justify-content-center mx-auto pt-2 pt-lg-0">
-          <div class="bottomBox bg-dark"></div>
-          <div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2">
-            <i class="flaticon-speed"></i>
-            <h3 id="header1" class="py-2 font-italic">Szybko</h3>
-          </div>
-          <div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2 mx-5">
-            <i class="flaticon-support"></i>
-            <h3 id="header2" class="py-2 font-italic">Solidnie</h3>
-          </div>
-          <div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2">
-            <i class="flaticon-helmet"></i>
-            <h3 id="header3" class="py-2 font-italic">Bezpiecznie</h3>
-          </div>
-        </div>
-      </section>
-      <!-- main content end -->
-    </main>
+    <!-- main -->
+    <div ng-view></div>
+    <!-- main end -->
 
     <footer class="row mx-0 bg-dark">
       <!-- contact -->
@@ -165,8 +103,9 @@
     </footer>
 
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-    <script src="cdn/jquery.js"></script>
+    <script src="/cdn/jquery.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/script/script.js"></script>
 </body>
 </html>
