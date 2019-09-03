@@ -19,12 +19,32 @@
     }
 }
 @mixin mQlaptop{ // from Bootstrap xl to @mixin mQfullHD
-    @media screen and (min-width: 1200px) and (max-width: 1440px){
+    @media screen and (min-width: 1201px) and (max-width: 1440px){
         @content;
     }
 }
 @mixin mQtablet{ // from Bootstrap lg to Bootstrap xl
-    @media screen and (min-width: 992px) and (max-width: 1199px){
+    @media screen and (min-width: 991px) and (max-width: 1200px){
+        @content;
+    }
+}
+@mixin mQmobileSmall{ // up to Bootstrap sm
+    @media screen and (max-width: 575px){
+        @content;
+    }
+}
+@mixin mQtabletPortrait{ // from Bootstrap sm to Bootstrap md (portrait)
+    @media screen and (min-width: 576px) and (max-width: 768px) and (orientation: portrait){
+        @content;
+    }
+}
+@mixin mQmobileMedium{ // from Bootstrap sm to Bootstrap md
+    @media screen and (min-width: 576px) and (max-width: 768px){
+        @content;
+    }
+}
+@mixin mQmobileLarge{ // from Bootstrap md to Bootstrap lg
+    @media screen and (min-width: 769px) and (max-width: 992px){
         @content;
     }
 }

@@ -36,6 +36,48 @@ main img {
   }
 }
 
+main #iconFacebook {
+  bottom: 20px;
+  right: 20px;
+  position: absolute;
+}
+
+@media screen and (orientation: portrait) {
+  main #iconFacebook i {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  main #iconFacebook {
+    bottom: 30px;
+    right: 30px;
+  }
+  main #iconFacebook i {
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  main #iconFacebook {
+    bottom: 30px;
+    right: 30px;
+  }
+  main #iconFacebook i {
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  main #iconFacebook {
+    bottom: 50px;
+    right: 50px;
+  }
+  main #iconFacebook i {
+    font-size: 80px;
+  }
+}
+
 main #arrow {
   width: 40px;
   height: 40px;
@@ -73,7 +115,7 @@ main #arrow:hover i {
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #arrow {
     width: 80px;
     height: 80px;
@@ -81,7 +123,7 @@ main #arrow:hover i {
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 991px) and (max-width: 1200px) {
   main #arrow {
     width: 60px;
     height: 60px;
@@ -109,13 +151,13 @@ main #section1 i {
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #section1 i {
     font-size: 53.33333px;
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 991px) and (max-width: 1200px) {
   main #section1 i {
     font-size: 40px;
   }
@@ -144,15 +186,83 @@ main #section2 i {
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #section2 i {
     font-size: 61.53846px;
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 991px) and (max-width: 1200px) {
   main #section2 i {
     font-size: 46.15385px;
+  }
+}
+
+main #section2 .bottomBox {
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+@media screen and (orientation: portrait) {
+  main #section2 .bottomBox {
+    height: 6vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main #section2 .bottomBox {
+    height: 22vh;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  main #section2 .bottomBox {
+    height: 25vh;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  main #section2 .bottomBox {
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) and (orientation: portrait) {
+  main #section2 .bottomBox {
+    height: 8vh;
+  }
+}
+
+main #section2 #header1 {
+  color: white;
+}
+
+@media screen and (max-width: 575px) {
+  main #section2 #header1 {
+    color: #343a40;
+  }
+}
+
+main #section2 #header2 {
+  color: white;
+}
+
+@media screen and (max-width: 575px) {
+  main #section2 #header2 {
+    color: #343a40;
+  }
+}
+
+main #section2 #header3 {
+  color: #ffc107;
+}
+
+@media screen and (max-width: 575px) {
+  main #section2 #header3 {
+    color: white;
   }
 }
 
@@ -201,13 +311,13 @@ main #welcomeText {
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #welcomeText {
     left: -10vw;
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 991px) and (max-width: 1200px) {
   main #welcomeText {
     left: -10vw;
   }
@@ -235,13 +345,13 @@ main #welcomeText h1 {
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #welcomeText h1 {
     font-size: 5.5rem;
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 991px) and (max-width: 1200px) {
   main #welcomeText h1 {
     font-size: 4.5rem;
   }
@@ -305,14 +415,14 @@ main .sectionBoxWhite {
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 991px) and (max-width: 1200px) {
   main .sectionBoxWhite {
     -webkit-transform: skewX(20deg) scaleX(1.5) translateX(-170px);
             transform: skewX(20deg) scaleX(1.5) translateX(-170px);
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
   main .sectionBoxWhite {
     -webkit-transform: skewX(20deg) scaleX(1.5) translateX(-250px);
             transform: skewX(20deg) scaleX(1.5) translateX(-250px);
@@ -332,5 +442,9 @@ main .box1 {
 
 main .box2 {
   background-color: #f1eace;
+}
+
+#copyright p, #copyright span {
+  font-size: 0.8rem;
 }
 /*# sourceMappingURL=style.css.map */
