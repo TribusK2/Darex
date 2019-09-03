@@ -14,7 +14,12 @@
     }
 }
 @mixin mQpanoram{
-    @media screen and (min-aspect-ratio: 82/42){
+    @media screen and (min-aspect-ratio: 82/42) and (max-aspect-ratio: 10/4){
+        @content;
+    }
+}
+@mixin mQpanoramWide{
+    @media screen and (min-aspect-ratio: 10/4){
         @content;
     }
 }

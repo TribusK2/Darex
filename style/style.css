@@ -131,7 +131,7 @@ main #arrow:hover i {
   }
 }
 
-@media screen and (min-aspect-ratio: 82 / 42) {
+@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
   main #arrow {
     left: 13vw;
   }
@@ -278,9 +278,21 @@ main #welcomeWraper {
   }
 }
 
-@media screen and (min-aspect-ratio: 82 / 42) {
+@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
   main #welcomeWraper {
     right: 30vw;
+  }
+}
+
+@media screen and (min-aspect-ratio: 10 / 4) {
+  main #welcomeWraper {
+    right: 10vw;
+  }
+}
+
+@media screen and (min-aspect-ratio: 10 / 4) {
+  main #welcomeWraper #welcomeText h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -327,7 +339,7 @@ main #welcomeText h1 {
   position: relative;
 }
 
-@media screen and (min-aspect-ratio: 82 / 42) {
+@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
   main #welcomeText h1 {
     font-size: 3rem;
   }

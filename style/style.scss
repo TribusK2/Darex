@@ -185,7 +185,6 @@ main{
 
     #welcomeWraper{
         width: 65vw;
-        // border: 1px solid blue;
         @include mQlandscape{
             position: absolute;
             padding-top: $topSpace;
@@ -193,6 +192,14 @@ main{
         }
         @include mQpanoram{
             right: 30vw;
+        }
+        @include mQpanoramWide{
+            right: 10vw;
+        }
+        #welcomeText h1{
+            @include mQpanoramWide{
+                font-size: 3.5rem;
+            }
         }
     }
     #welcomeText{
