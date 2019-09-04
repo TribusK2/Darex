@@ -376,6 +376,10 @@ main{
     }
     .referencesBox{
         @extend .welcomeBox;
+        @include mQportrait{
+            width: 100vw;
+            transform: translateY(7vh);
+        }
         @include mQlandscape{
                 height: (100vh - ($topSpace));
                 transform: skewX(25deg);

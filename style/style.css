@@ -599,6 +599,14 @@ main #referencesText .movedLeft {
   }
 }
 
+@media screen and (orientation: portrait) {
+  main .referencesBox {
+    width: 100vw;
+    -webkit-transform: translateY(7vh);
+            transform: translateY(7vh);
+  }
+}
+
 @media screen and (orientation: landscape) {
   main .referencesBox {
     height: 91vh;
