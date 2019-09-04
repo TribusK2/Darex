@@ -17,7 +17,6 @@ header{
         }
     }
 }
-
 main{
     padding-top: $topSpace;
     background-color: $skewShapeColor;
@@ -61,7 +60,6 @@ main{
             }
         }
     }
-
     #arrow{
         width: $btnSize;
         height: $btnSize;
@@ -71,6 +69,7 @@ main{
         left: 10vw;
         z-index: 1;
         transition: all $btnChangeSpeed linear;
+        box-shadow: none;
         &:hover{
             background-color: $skewShapeColor !important;
             i{
@@ -181,9 +180,20 @@ main{
         }
 
     }
-
-
-    #welcomeWraper{
+    #section3{
+        overflow: hidden;
+        display: block;
+        img{
+            width: auto;
+            height: (90vh - ($topSpace));
+            float: left;
+            @include mQportrait{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .welcomeWraper{
         width: 65vw;
         @include mQlandscape{
             position: absolute;
@@ -293,6 +303,102 @@ main{
     }
     .box2{
         background-color: $box2Color;
+    }
+    .referencesWraper{
+        @include mQpanoram{
+            right: 0vw;
+        }
+    }
+    #referencesText{
+        z-index: 1;
+        right: -12vw;
+        height: (100vh - ($topSpace)-5);
+        @include mQportrait{
+            height: auto;
+        }
+        @include mQlandscape{
+            text-align: left !important;
+            position: relative;
+            top: 20vh;
+            right: -14vw;
+        }
+        @include mQfullHD{
+            right: -10vw;
+        }
+        @include mQlaptop{
+            right: -10vw;
+        }
+        @include mQtablet{
+            right: -10vw;
+        }
+        h1{ 
+            position: relative;
+            @include mQpanoram{
+                font-size: 3rem;
+            }
+            @include mQlandscape{
+                padding: 1vh 0;
+            }
+            @include mQfullHD{
+                font-size: 7rem;
+            }
+            @include mQlaptop{
+                font-size: 5.5rem;
+            }
+            @include mQtablet{
+                font-size: 4.5rem;
+            }
+        }
+        .movedRight{
+            right: -4vw;
+            @include mQmobileSmall{
+                right:0vw;
+            }
+            @include mQmobileMedium{
+                right:-2vw;
+            }
+            @include mQportrait{
+                right:0vw;
+            }
+        }
+        .movedLeft{
+            right: 2vw;
+            @include mQmobileSmall{
+                right:6vw;
+            }
+            @include mQmobileMedium{
+                right:5vw;
+            }
+            @include mQportrait{
+                right:0vw;
+            }
+        }
+    }
+    .referencesBox{
+        @extend .welcomeBox;
+        @include mQlandscape{
+                height: (100vh - ($topSpace));
+                transform: skewX(25deg);
+            }
+            &--solid{
+                    @extend .welcomeBox--solid;
+                    @include mQlandscape{
+                        transform: skewX(25deg) translateX(8vw);
+                        left: 15vw;
+                    }
+                }
+    }
+    .borderBox{
+        position: absolute;
+        right: -0.5vw;
+        bottom: -5vh;
+        border: 1px solid black;
+        width: 105%;
+        height: 220%;
+        border-radius: 10px;
+        @include mQportrait{
+            right: -2.5%;
+        }
     }
 }
 #copyright{

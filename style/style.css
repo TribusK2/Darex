@@ -88,6 +88,8 @@ main #arrow {
   z-index: 1;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 main #arrow:hover {
@@ -266,12 +268,30 @@ main #section2 #header3 {
   }
 }
 
-main #welcomeWraper {
+main #section3 {
+  overflow: hidden;
+  display: block;
+}
+
+main #section3 img {
+  width: auto;
+  height: 81vh;
+  float: left;
+}
+
+@media screen and (orientation: portrait) {
+  main #section3 img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+main .welcomeWraper {
   width: 65vw;
 }
 
 @media screen and (orientation: landscape) {
-  main #welcomeWraper {
+  main .welcomeWraper {
     position: absolute;
     padding-top: 9vh;
     height: 91vh;
@@ -279,19 +299,19 @@ main #welcomeWraper {
 }
 
 @media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
-  main #welcomeWraper {
+  main .welcomeWraper {
     right: 30vw;
   }
 }
 
 @media screen and (min-aspect-ratio: 10 / 4) {
-  main #welcomeWraper {
+  main .welcomeWraper {
     right: 10vw;
   }
 }
 
 @media screen and (min-aspect-ratio: 10 / 4) {
-  main #welcomeWraper #welcomeText h1 {
+  main .welcomeWraper #welcomeText h1 {
     font-size: 3.5rem;
   }
 }
@@ -369,7 +389,7 @@ main #welcomeText h1 {
   }
 }
 
-main .welcomeBox, main .welcomeBox--solid {
+main .welcomeBox, main .welcomeBox--solid, main .referencesBox--solid, main .referencesBox {
   background-color: #ffcc0080;
   width: 40vw;
   height: 100%;
@@ -377,7 +397,7 @@ main .welcomeBox, main .welcomeBox--solid {
 }
 
 @media screen and (orientation: portrait) {
-  main .welcomeBox, main .welcomeBox--solid {
+  main .welcomeBox, main .welcomeBox--solid, main .referencesBox--solid, main .referencesBox {
     width: 100vw;
     -webkit-transform: translateY(14vh);
             transform: translateY(14vh);
@@ -385,20 +405,20 @@ main .welcomeBox, main .welcomeBox--solid {
 }
 
 @media screen and (orientation: landscape) {
-  main .welcomeBox, main .welcomeBox--solid {
+  main .welcomeBox, main .welcomeBox--solid, main .referencesBox--solid, main .referencesBox {
     height: 91vh;
     -webkit-transform: skewX(-25deg);
             transform: skewX(-25deg);
   }
 }
 
-main .welcomeBox--solid {
+main .welcomeBox--solid, main .referencesBox--solid {
   background-color: #ffcc00;
   width: 100vw;
 }
 
 @media screen and (orientation: landscape) {
-  main .welcomeBox--solid {
+  main .welcomeBox--solid, main .referencesBox--solid {
     -webkit-transform: skewX(-25deg) translateX(-8vw);
             transform: skewX(-25deg) translateX(-8vw);
     right: 15vw;
@@ -406,7 +426,7 @@ main .welcomeBox--solid {
 }
 
 @media screen and (orientation: portrait) {
-  main .welcomeBox--solid {
+  main .welcomeBox--solid, main .referencesBox--solid {
     display: none;
   }
 }
@@ -454,6 +474,161 @@ main .box1 {
 
 main .box2 {
   background-color: #f1eace;
+}
+
+@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
+  main .referencesWraper {
+    right: 0vw;
+  }
+}
+
+main #referencesText {
+  z-index: 1;
+  right: -12vw;
+  height: 86vh;
+}
+
+@media screen and (orientation: portrait) {
+  main #referencesText {
+    height: auto;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  main #referencesText {
+    text-align: left !important;
+    position: relative;
+    top: 20vh;
+    right: -14vw;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  main #referencesText {
+    right: -10vw;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  main #referencesText {
+    right: -10vw;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  main #referencesText {
+    right: -10vw;
+  }
+}
+
+main #referencesText h1 {
+  position: relative;
+}
+
+@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
+  main #referencesText h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  main #referencesText h1 {
+    padding: 1vh 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  main #referencesText h1 {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  main #referencesText h1 {
+    font-size: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  main #referencesText h1 {
+    font-size: 4.5rem;
+  }
+}
+
+main #referencesText .movedRight {
+  right: -4vw;
+}
+
+@media screen and (max-width: 575px) {
+  main #referencesText .movedRight {
+    right: 0vw;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  main #referencesText .movedRight {
+    right: -2vw;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  main #referencesText .movedRight {
+    right: 0vw;
+  }
+}
+
+main #referencesText .movedLeft {
+  right: 2vw;
+}
+
+@media screen and (max-width: 575px) {
+  main #referencesText .movedLeft {
+    right: 6vw;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  main #referencesText .movedLeft {
+    right: 5vw;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  main #referencesText .movedLeft {
+    right: 0vw;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  main .referencesBox {
+    height: 91vh;
+    -webkit-transform: skewX(25deg);
+            transform: skewX(25deg);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  main .referencesBox--solid {
+    -webkit-transform: skewX(25deg) translateX(8vw);
+            transform: skewX(25deg) translateX(8vw);
+    left: 15vw;
+  }
+}
+
+main .borderBox {
+  position: absolute;
+  right: -0.5vw;
+  bottom: -5vh;
+  border: 1px solid black;
+  width: 105%;
+  height: 220%;
+  border-radius: 10px;
+}
+
+@media screen and (orientation: portrait) {
+  main .borderBox {
+    right: -2.5%;
+  }
 }
 
 #copyright p, #copyright span {
