@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
 myApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider
@@ -9,7 +9,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
     )
     .when("/references", {
         templateUrl : "references.html",
-        // controller : "appCtrl"
+        controller : "referencesCtrl"
         }
     )
     .when("/contact", {
@@ -45,4 +45,10 @@ myApp.controller('mainCtrl', ['$scope', function($scope){
         }
     };
     
+}]);
+
+myApp.controller('referencesCtrl', ['$scope', function($scope){
+    $scope.toggle = function(){
+        $scope.checked = !$scope.checked;
+    };
 }]);

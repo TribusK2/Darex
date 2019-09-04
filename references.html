@@ -18,7 +18,7 @@
 		<img src="./img/references-main.jpg" class="imgMain" alt="Hala z suwnicą">
 
 		<!-- content -->
-		<div class="referencesContent row col-7 mx-0 px-0">
+		<div class="referencesContent row col-10 col-xl-7 mx-0 px-0">
 			<!-- content box -->
 			<div class="col-6 px-0">
 				<div class="row mx-0">
@@ -28,7 +28,7 @@
 						<p class="h6 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque enim dolorum necessitatibus voluptas neque beatae voluptatem illum. Commodi tempora consequuntur labore, odit mollitia temporibus repellendus libero. Cupiditate ipsam harum dolor.</p>
 					</div>
 
-					<div class="galleryBtn col-2 mx-auto px-0 py-2 text-center">
+					<div class="galleryBtn col-2 mx-auto px-0 py-2 text-center" ng-click="toggle()">
 						<button class="galleryArrow btn bg-dark mx-0 mb-3 outline-none">
 							<a class="row justify-content-center mx-0 btn-link-none text-decoration-none text-light"><i class="flaticon-arrow"></i></a>
 						</button>
@@ -36,12 +36,12 @@
 				</div>
 			</div>
 
-			<div class="col-6 mx-0 px-0">
-				<div class="gallery pr-3 blurBox">
-					<img src="/img/realizations01.jpg" class="img-fluid my-5 shadow" alt="Suwnica natorowa dwudźwigarowa">
-					<img src="/img/realizations02.jpg" class="img-fluid my-5 shadow" alt="Wciągnik typu monorail oraz trawers">
-					<img src="/img/realizations03.jpg" class="img-fluid my-5 shadow" alt="Suwnica natorowa jednodźwigarowa firmy DEMAG">
-					<img src="/img/realizations04.jpg" class="img-fluid my-5 shadow" alt="Wciągarka firmy SWF na suwnicy dwudźwigarowej">
+			<div class="hiddenBorder col-6 mx-0 px-0">
+				<div class="gallery pr-3 blurBox" ng-show="checked">
+					<img src="/img/realizations01.jpg" class="img-fluid my-5" alt="Suwnica natorowa dwudźwigarowa">
+					<img src="/img/realizations02.jpg" class="img-fluid my-5" alt="Wciągnik typu monorail oraz trawers">
+					<img src="/img/realizations03.jpg" class="img-fluid my-5" alt="Suwnica natorowa jednodźwigarowa firmy DEMAG">
+					<img src="/img/realizations04.jpg" class="img-fluid my-5" alt="Wciągarka firmy SWF na suwnicy dwudźwigarowej">
 				</div>
 			</div>
 			

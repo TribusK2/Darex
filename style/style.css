@@ -646,6 +646,16 @@ main .referencesContent {
   margin-bottom: -81vh;
 }
 
+@media screen and (orientation: portrait) {
+  main .referencesContent {
+    -webkit-transform: translateY(-31vh);
+            transform: translateY(-31vh);
+    margin-bottom: -26vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 main .galleryArrow {
   width: 40px;
   height: 40px;
@@ -660,6 +670,8 @@ main .galleryArrow i {
 
 main .refContentBox {
   background-color: #e7e7e7bd;
+  -webkit-box-shadow: 5px 5px 10px;
+          box-shadow: 5px 5px 10px;
 }
 
 main .galleryBtn {
@@ -667,6 +679,9 @@ main .galleryBtn {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   cursor: pointer;
+  -webkit-box-shadow: 5px 5px 10px;
+          box-shadow: 5px 5px 10px;
+  z-index: 1;
 }
 
 main .galleryBtn:hover {
@@ -686,6 +701,10 @@ main .gallery {
   position: absolute;
   max-height: 100%;
   scrollbar-width: none;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  width: 100%;
+  left: 0px;
 }
 
 main .gallery::-webkit-scrollbar {
@@ -695,6 +714,17 @@ main .gallery::-webkit-scrollbar {
 main .gallery img {
   width: 100%;
   border: 15px solid white;
+  -webkit-box-shadow: 3px 2px 10px;
+          box-shadow: 3px 2px 10px;
+}
+
+main .gallery.ng-hide {
+  left: -300px;
+  opacity: 0.5;
+}
+
+main .hiddenBorder {
+  overflow: hidden;
 }
 
 main .blurBox {
