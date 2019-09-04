@@ -183,7 +183,8 @@ main{
     #section3{
         overflow: hidden;
         display: block;
-        img{
+        height: auto;
+        .imgMain{
             width: auto;
             height: (90vh - ($topSpace));
             float: left;
@@ -403,6 +404,58 @@ main{
         @include mQportrait{
             right: -2.5%;
         }
+    }
+    .referencesContent{
+        transform: translateY(-(90vh - ($topSpace)));
+        margin-bottom: -(90vh - ($topSpace));
+    }
+    .galleryArrow{
+        width: $btnSize;
+        height: $btnSize;
+        border-radius: $btnSize/2;
+        transform: rotate(-90deg);
+        // &:hover{
+        //     background-color: transparent !important;
+        //     i{
+        //         color: $colorDark !important;
+        //     }
+        // }
+        i{
+            color: $box4Color;
+        }
+    }
+    .refContentBox{
+        background-color: $box3Color;
+    }
+    .galleryBtn{
+        background-color: $box4Color;
+        transition: all $btnChangeSpeed linear;
+        cursor: pointer;
+        &:hover{
+            background-color: $box5Color;
+            .galleryArrow{
+                background-color: transparent !important;
+                i{
+                    color: $colorDark !important;
+                }
+            }
+        }
+    }
+    .gallery{
+        overflow: scroll;
+        position: absolute;
+        max-height: 100%;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        img{
+            width: 100%;
+            border: 15px solid white;
+        }
+    }
+    .blurBox{
+        mask: linear-gradient( black 90%, transparent 100%);
     }
 }
 #copyright{

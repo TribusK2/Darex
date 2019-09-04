@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Darex - Konserwacja suwnic</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/cdn/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/icons/flaticon.css">
     <link rel="icon" href="./img/logo-short.jpg">
     <link rel="stylesheet" href="style/style.css">
@@ -29,13 +30,13 @@
             <div class="collapse navbar-collapse" id="navbarToggler">
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-center font-weight-bold h4">
                 <li class="nav-item px-3 py-lg-0">
-                  <a class="nav-link text-uppercase py-lg-0" ng-class="{active: isActive('/')}" data-toggle="tab" href="#!/">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link text-uppercase py-lg-0" ng-click="scrollTop()" ng-class="{active: isActive('/')}" data-toggle="tab" href="#!/">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item px-3 py-lg-0">
-                  <a class="nav-link text-uppercase py-lg-0" ng-class="{active: isActive('/references')}" data-toggle="tab" href="#!/references">Referencje</a>
+                  <a class="nav-link text-uppercase py-lg-0" ng-click="scrollTop()" ng-class="{active: isActive('/references')}" data-toggle="tab" href="#!/references">Referencje</a>
                 </li>
                 <li class="nav-item px-3 py-lg-0">
-                  <a class="nav-link text-uppercase py-lg-0" ng-class="{active: isActive('/contact')}" data-toggle="tab" href="#!/contact">Kontakt</a>
+                  <a class="nav-link text-uppercase py-lg-0" ng-click="scrollTop()" ng-class="{active: isActive('/contact')}" data-toggle="tab" href="#!/contact">Kontakt</a>
                 </li>
               </ul>
             </div>
@@ -105,6 +106,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
     <script src="/cdn/jquery.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script src="/cdn/bootstrap.js"></script>
 </body>
 </html>

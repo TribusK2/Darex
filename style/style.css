@@ -271,16 +271,17 @@ main #section2 #header3 {
 main #section3 {
   overflow: hidden;
   display: block;
+  height: auto;
 }
 
-main #section3 img {
+main #section3 .imgMain {
   width: auto;
   height: 81vh;
   float: left;
 }
 
 @media screen and (orientation: portrait) {
-  main #section3 img {
+  main #section3 .imgMain {
     width: 100%;
     height: auto;
   }
@@ -637,6 +638,70 @@ main .borderBox {
   main .borderBox {
     right: -2.5%;
   }
+}
+
+main .referencesContent {
+  -webkit-transform: translateY(-81vh);
+          transform: translateY(-81vh);
+  margin-bottom: -81vh;
+}
+
+main .galleryArrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+main .galleryArrow i {
+  color: #e7e7e7ef;
+}
+
+main .refContentBox {
+  background-color: #e7e7e7bd;
+}
+
+main .galleryBtn {
+  background-color: #e7e7e7ef;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+main .galleryBtn:hover {
+  background-color: #e7e7e781;
+}
+
+main .galleryBtn:hover .galleryArrow {
+  background-color: transparent !important;
+}
+
+main .galleryBtn:hover .galleryArrow i {
+  color: #343a40 !important;
+}
+
+main .gallery {
+  overflow: scroll;
+  position: absolute;
+  max-height: 100%;
+  scrollbar-width: none;
+}
+
+main .gallery::-webkit-scrollbar {
+  display: none;
+}
+
+main .gallery img {
+  width: 100%;
+  border: 15px solid white;
+}
+
+main .blurBox {
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(transparent));
+  -webkit-mask: linear-gradient(black 90%, transparent 100%);
+          mask: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(transparent));
+          mask: linear-gradient(black 90%, transparent 100%);
 }
 
 #copyright p, #copyright span {
