@@ -4,6 +4,9 @@
 
 		<div class="col px-0 d-flex justify-content-end">
 			<div class="welcomeWraper referencesWraper col p-0 m-0 d-flex justify-content-center mx-auto"> 
+				<div class="referencesBox p-0 m-0"></div>
+				<div class="referencesBox--solid p-0 m-0"></div>
+				
 				<div id="referencesText" class="pt-3 text-center">
 					<h1 class="movedLeft text-light font-weight-bold">nasze</h1>
 					<h1 class="movedRight text-dark font-weight-bold mb-3 mb-md-4 mb-lg-5"><span>referencje</span>
@@ -11,43 +14,68 @@
 					</h1>
 				</div>
 				
-				<div class="referencesBox p-0 m-0"></div>
-				<div class="referencesBox--solid p-0 m-0"></div>
 			</div>
 		</div>
 		<img src="./img/references-main.jpg" class="imgMain" alt="Hala z suwnicą">
 
 		<!-- content -->
-		<div class="referencesContent row col-10 col-xl-7 mx-0 px-0">
+		<div class="referencesContent row col-11 col-lg-10 col-xl-7 mx-0 py-5 px-0" ng-class="{'referencesContentView':checked}">
 			<!-- content box -->
-			<div class="col-6 px-0">
+			<div class="col-12 col-sm-6 px-0">
 				<div class="row mx-0">
-					<div class="refContentBox col-10">
+					<div class="refContentBox col-10 py-3">
 						<h2 class="h1 font-weight-bold"> <span class="text-warning">Tu </span><span class="text-black text-uppercase">byliśmy</span></h2>
+						<h4 class="h4">Header 1</h4>
 						<p class="h6 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque enim dolorum necessitatibus voluptas neque beatae voluptatem illum. Commodi tempora consequuntur labore, odit mollitia temporibus repellendus libero. Cupiditate ipsam harum dolor.</p>
+						<h4 class="h4">Header 2</h4>
 						<p class="h6 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque enim dolorum necessitatibus voluptas neque beatae voluptatem illum. Commodi tempora consequuntur labore, odit mollitia temporibus repellendus libero. Cupiditate ipsam harum dolor.</p>
+						<!-- <h4 class="h4">Header 3</h4>
+						<p class="h6 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque enim dolorum necessitatibus voluptas neque beatae voluptatem illum. Commodi tempora consequuntur labore, odit mollitia temporibus repellendus libero. Cupiditate ipsam harum dolor.</p> -->
 					</div>
 
 					<div class="galleryBtn col-2 mx-auto px-0 py-2 text-center" ng-click="toggle()">
-						<button class="galleryArrow btn bg-dark mx-0 mb-3 outline-none">
+						<button class="galleryArrow btn bg-dark outline-none" ng-class="{'galleryArrowLeft':checked}">
 							<a class="row justify-content-center mx-0 btn-link-none text-decoration-none text-light"><i class="flaticon-arrow"></i></a>
 						</button>
 					</div>
 				</div>
 			</div>
-
-			<div class="hiddenBorder col-6 mx-0 px-0">
-				<div class="gallery pr-3 blurBox" ng-show="checked">
-					<img src="/img/realizations01.jpg" class="img-fluid my-5" alt="Suwnica natorowa dwudźwigarowa">
+			<div class="hiddenBorder col-12 col-sm-6 mx-0 px-0" ng-class="{'hiddenBorderView':checked}">
+				<div class="gallery pr-md-3 blurBox" ng-show="checked">
+					<img src="/img/realizations01.jpg" class="img-fluid my-5" type="button" class="btn btn-primary" data-toggle="modal" data-target="#pic01Modal" alt="Suwnica natorowa dwudźwigarowa">
 					<img src="/img/realizations02.jpg" class="img-fluid my-5" alt="Wciągnik typu monorail oraz trawers">
 					<img src="/img/realizations03.jpg" class="img-fluid my-5" alt="Suwnica natorowa jednodźwigarowa firmy DEMAG">
 					<img src="/img/realizations04.jpg" class="img-fluid my-5" alt="Wciągarka firmy SWF na suwnicy dwudźwigarowej">
 				</div>
 			</div>
-			
+			<div id="galleryAnchor"></div>
 			<!-- content box end -->
 		</div>
 		<!-- content end -->
-	</section>	
+	</section>
+
+	<!-- Modal -->
+	<div class="modal fade" id="pic01Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="pic01ModalLabel">Modal title</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+				<div class="modal-body">
+					<div class="modal-body text-center">
+						<img src="/img/realizations01.jpg" class="img-fluid mx-0 px-0" alt="">
+					</div>
+				</div>
+			<div class="modal-footer">
+				<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, iste corrupti? Voluptates aspernatur assumenda iusto sapiente eum, beatae vel praesentium?</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- Modal end -->
+	
   <!-- main display end -->
 </main>        

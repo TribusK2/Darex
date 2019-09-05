@@ -50,5 +50,18 @@ myApp.controller('mainCtrl', ['$scope', function($scope){
 myApp.controller('referencesCtrl', ['$scope', function($scope){
     $scope.toggle = function(){
         $scope.checked = !$scope.checked;
+        let anchor = document.getElementById('galleryAnchor');
+        if (anchor) {
+            window.scrollTo({
+                top: anchor.offsetTop,
+                behavior: 'smooth',
+            });
+        }
     };
+    let parentBoxHeight = $('.refContentBox').css('height');
+    $('.gallery').css('height', parentBoxHeight);
+    $(window).resize(function() {
+        let parentBoxHeight = $('.refContentBox').css('height');
+        $('.gallery').css('height', parentBoxHeight);
+    });
 }]);

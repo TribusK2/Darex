@@ -220,19 +220,19 @@ main #section2 .bottomBox {
   }
 }
 
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 767px) {
   main #section2 .bottomBox {
     height: 25vh;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   main #section2 .bottomBox {
     height: 20vh;
   }
 }
 
-@media screen and (min-width: 576px) and (max-width: 768px) and (orientation: portrait) {
+@media screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
   main #section2 .bottomBox {
     height: 8vh;
   }
@@ -484,7 +484,6 @@ main .box2 {
 }
 
 main #referencesText {
-  z-index: 1;
   right: -12vw;
   height: 86vh;
 }
@@ -566,7 +565,7 @@ main #referencesText .movedRight {
   }
 }
 
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 767px) {
   main #referencesText .movedRight {
     right: -2vw;
   }
@@ -588,7 +587,7 @@ main #referencesText .movedLeft {
   }
 }
 
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 767px) {
   main #referencesText .movedLeft {
     right: 5vw;
   }
@@ -662,16 +661,68 @@ main .galleryArrow {
   border-radius: 20px;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform linear 0.15s 0.3s;
+  transition: -webkit-transform linear 0.15s 0.3s;
+  transition: transform linear 0.15s 0.3s;
+  transition: transform linear 0.15s 0.3s, -webkit-transform linear 0.15s 0.3s;
 }
 
 main .galleryArrow i {
   color: #e7e7e7ef;
 }
 
+@media screen and (max-width: 575px) {
+  main .galleryArrow {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    position: relative;
+    top: 90%;
+  }
+}
+
+main .galleryArrowLeft {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media screen and (max-width: 575px) {
+  main .galleryArrowLeft {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
 main .refContentBox {
   background-color: #e7e7e7bd;
   -webkit-box-shadow: 5px 5px 10px;
           box-shadow: 5px 5px 10px;
+}
+
+@media screen and (min-width: 1441px) {
+  main .refContentBox p {
+    font-size: 1.5rem;
+  }
+  main .refContentBox h4 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main .refContentBox p {
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  main .refContentBox p {
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  main .refContentBox p {
+    font-weight: 400;
+  }
 }
 
 main .galleryBtn {
@@ -698,13 +749,13 @@ main .galleryBtn:hover .galleryArrow i {
 
 main .gallery {
   overflow: scroll;
-  position: absolute;
-  max-height: 100%;
+  position: relative;
   scrollbar-width: none;
-  -webkit-transition: all linear 0.5s;
-  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
   width: 100%;
   left: 0px;
+  top: 0px;
 }
 
 main .gallery::-webkit-scrollbar {
@@ -720,18 +771,51 @@ main .gallery img {
 
 main .gallery.ng-hide {
   left: -300px;
-  opacity: 0.5;
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 575px) {
+  main .gallery.ng-hide {
+    left: 0px;
+    top: -90vh;
+  }
 }
 
 main .hiddenBorder {
   overflow: hidden;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+@media screen and (max-width: 575px) {
+  main .hiddenBorder {
+    -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(transparent));
+    -webkit-mask: linear-gradient(black 90%, transparent 100%);
+            mask: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(transparent));
+            mask: linear-gradient(black 90%, transparent 100%);
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main .hiddenBorderView {
+    height: 70vh;
+  }
 }
 
 main .blurBox {
-  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(transparent));
-  -webkit-mask: linear-gradient(black 90%, transparent 100%);
-          mask: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(transparent));
-          mask: linear-gradient(black 90%, transparent 100%);
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(10%, black), color-stop(90%, black), to(transparent));
+  -webkit-mask: linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%);
+          mask: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(10%, black), color-stop(90%, black), to(transparent));
+          mask: linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.modal p {
+  text-indent: 1em;
+}
+
+.modal img {
+  width: 100%;
 }
 
 #copyright p, #copyright span {

@@ -311,7 +311,6 @@ main{
         }
     }
     #referencesText{
-        z-index: 1;
         right: -12vw;
         height: (100vh - ($topSpace)-5);
         @include mQportrait{
@@ -420,19 +419,48 @@ main{
         height: $btnSize;
         border-radius: $btnSize/2;
         transform: rotate(-90deg);
-        // &:hover{
-        //     background-color: transparent !important;
-        //     i{
-        //         color: $colorDark !important;
-        //     }
-        // }
+        transition: transform linear 0.15s 0.3s;
         i{
             color: $box4Color;
+        }
+        @include mQmobileSmall{
+            transform: rotate(0deg);
+            position: relative;
+            top: 90%;
+        }
+    }
+    .galleryArrowLeft{
+        transform: rotate(90deg);
+        @include mQmobileSmall{
+            transform: rotate(180deg);
         }
     }
     .refContentBox{
         background-color: $box3Color;
         box-shadow: 5px 5px 10px;
+        @include mQfullHD{
+            p{
+                font-size: 1.5rem;
+            }
+            h4{
+                font-size: 2.5rem;
+            }
+        }
+        @include mQmobileSmall{
+            p{
+                font-weight: 400;
+            } 
+        }
+        @include mQmobileMedium{
+            p{
+                font-weight: 400;
+            } 
+        }
+        @include mQmobileLarge{
+            p{
+                font-weight: 400;
+            } 
+        }
     }
     .galleryBtn{
         background-color: $box4Color;
@@ -452,12 +480,12 @@ main{
     }
     .gallery{
         overflow: scroll;
-        position: absolute;
-        max-height: 100%;
+        position: relative;
         scrollbar-width: none;
-        transition: all linear 0.5s;
+        transition: all linear 0.3s;
         width: 100%;
         left: 0px;
+        top: 0px;
         &::-webkit-scrollbar {
             display: none;
         }
@@ -469,13 +497,35 @@ main{
     }
     .gallery.ng-hide{
         left: -300px;
-        opacity: 0.5;
+        opacity: 0.3;
+        @include mQmobileSmall{
+            left: 0px;
+            top: -90vh;
+        }
     }
     .hiddenBorder{
         overflow: hidden;
+        transition: all linear 0.3s;
+        @include mQmobileSmall{
+            mask: linear-gradient( black 90%, transparent 100%);
+            height: 0;
+        }
+    }
+    .hiddenBorderView{
+        @include mQmobileSmall{
+            height: 70vh;
+        }
     }
     .blurBox{
-        mask: linear-gradient( black 90%, transparent 100%);
+        mask: linear-gradient( transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+}
+.modal{
+    p{
+        text-indent: 1em;
+    }
+    img{
+        width: 100%;
     }
 }
 #copyright{
