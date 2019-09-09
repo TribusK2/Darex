@@ -14,7 +14,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
     )
     .when("/contact", {
         templateUrl : "contact.html",
-        // controller : "appCtrl"
+        controller : "contactCtrl"
         }
     )
     .otherwise({
@@ -86,4 +86,19 @@ myApp.controller('referencesCtrl', ['$scope','$http', function($scope, $http){
         $scope.alt = this.pic.alt;
         $scope.description = this.pic.description;
     };
+}]);
+
+myApp.controller('contactCtrl', ['$scope', function($scope){
+    
+    // scroll function on arrow button
+    $scope.scrolliIcon = function() {
+        let anchor = document.getElementById('iIcon');
+        if (anchor) {
+            window.scrollTo({
+                top: anchor.offsetTop -50,
+                behavior: 'smooth',
+            });
+        }
+    };
+
 }]);

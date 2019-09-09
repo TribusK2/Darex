@@ -78,7 +78,7 @@ main #iconFacebook {
   }
 }
 
-main #arrow {
+main #arrow, main #arrowContact {
   width: 40px;
   height: 40px;
   border-radius: 20px;
@@ -92,16 +92,16 @@ main #arrow {
           box-shadow: none;
 }
 
-main #arrow:hover {
+main #arrow:hover, main #arrowContact:hover {
   background-color: #ffcc00 !important;
 }
 
-main #arrow:hover i {
+main #arrow:hover i, main #arrowContact:hover i {
   color: black !important;
 }
 
 @media screen and (orientation: portrait) {
-  main #arrow {
+  main #arrow, main #arrowContact {
     position: relative;
     display: block;
     bottom: 0px;
@@ -110,7 +110,7 @@ main #arrow:hover i {
 }
 
 @media screen and (min-width: 1441px) {
-  main #arrow {
+  main #arrow, main #arrowContact {
     width: 120px;
     height: 120px;
     border-radius: 60px;
@@ -118,7 +118,7 @@ main #arrow:hover i {
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
-  main #arrow {
+  main #arrow, main #arrowContact {
     width: 80px;
     height: 80px;
     border-radius: 40px;
@@ -126,7 +126,7 @@ main #arrow:hover i {
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
-  main #arrow {
+  main #arrow, main #arrowContact {
     width: 60px;
     height: 60px;
     border-radius: 30px;
@@ -134,7 +134,7 @@ main #arrow:hover i {
 }
 
 @media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
-  main #arrow {
+  main #arrow, main #arrowContact {
     left: 13vw;
   }
 }
@@ -287,12 +287,12 @@ main #section3 .imgMain {
   }
 }
 
-main .welcomeWraper {
+main .welcomeWraper, main .welcomeWraperContact {
   width: 65vw;
 }
 
 @media screen and (orientation: landscape) {
-  main .welcomeWraper {
+  main .welcomeWraper, main .welcomeWraperContact {
     position: absolute;
     padding-top: 9vh;
     height: 91vh;
@@ -300,19 +300,19 @@ main .welcomeWraper {
 }
 
 @media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
-  main .welcomeWraper {
+  main .welcomeWraper, main .welcomeWraperContact {
     right: 30vw;
   }
 }
 
 @media screen and (min-aspect-ratio: 10 / 4) {
-  main .welcomeWraper {
+  main .welcomeWraper, main .welcomeWraperContact {
     right: 10vw;
   }
 }
 
 @media screen and (min-aspect-ratio: 10 / 4) {
-  main .welcomeWraper #welcomeText h1 {
+  main .welcomeWraper #welcomeText h1, main .welcomeWraperContact #welcomeText h1 {
     font-size: 3.5rem;
   }
 }
@@ -810,6 +810,229 @@ main .blurBox {
           mask: linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
+main .contactHeader {
+  background-color: black !important;
+  position: absolute;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+@media screen and (orientation: portrait) {
+  main .contactHeader {
+    background-color: #343a40 !important;
+    opacity: 1;
+  }
+}
+
+main .contactHeader h1 {
+  font-size: 3.5rem;
+}
+
+@media screen and (orientation: portrait) {
+  main .contactHeader h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  main .contactHeader h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  main .contactHeader h1 {
+    font-size: 2rem;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main .contactHeader h1 {
+    font-size: 2rem;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
+  main .contactHeader h1 {
+    font-size: 2.5rem;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  main .welcomeWraperContact {
+    width: 100vw;
+  }
+}
+
+main #contactText {
+  z-index: 1;
+}
+
+@media screen and (min-width: 1441px) {
+  main #contactText h2 {
+    font-size: 2.2rem;
+    margin-top: 20px !important;
+  }
+  main #contactText h3 {
+    font-size: 2.2rem;
+  }
+  main #contactText p, main #contactText a {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  main #contactText {
+    margin-top: 30px !important;
+    margin-left: -20px !important;
+  }
+}
+
+@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
+  main #contactText {
+    margin-top: 30px !important;
+    margin-left: -100px !important;
+  }
+  main #contactText h2, main #contactText h3, main #contactText p {
+    text-align: left;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  main #contactText {
+    margin-top: 10px !important;
+    text-align: center;
+  }
+  main #contactText div {
+    margin: auto;
+  }
+  main #contactText p, main #contactText h3, main #contactText h2 {
+    text-align: center;
+  }
+  main #contactText i {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  main #contactText h2 {
+    font-size: 1.8rem;
+  }
+  main #contactText h3 {
+    font-size: 1.5rem;
+  }
+  main #contactText p, main #contactText a {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  main #contactText {
+    padding-top: 0px !important;
+    margin-top: 20px !important;
+    margin-left: -160px !important;
+  }
+  main #contactText h2 {
+    font-size: 1rem;
+    text-align: left;
+  }
+  main #contactText h3 {
+    font-size: 1rem;
+    text-align: left;
+  }
+  main #contactText p, main #contactText a {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+@media screen and (min-aspect-ratio: 10 / 4) {
+  main #contactText {
+    padding-top: 10px !important;
+    margin-top: 20px !important;
+    margin-left: -50vw !important;
+  }
+  main #contactText h2 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  main #contactText h3 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  main #contactText p, main #contactText a {
+    font-size: 2.2rem;
+    text-align: left;
+  }
+  main #contactText i {
+    font-size: 3rem;
+  }
+}
+
+main #contactText .bigIcon {
+  font-size: 6rem;
+}
+
+@media screen and (min-width: 1441px) {
+  main #contactText .bigIcon {
+    font-size: 9rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  main #contactText .bigIcon {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  main #contactText .bigIcon {
+    font-size: 5rem;
+  }
+}
+
+main #arrowContact {
+  left: 49vw;
+  background-color: #ffcc00 !important;
+}
+
+@media screen and (orientation: portrait) {
+  main #arrowContact {
+    left: 0vw;
+    background-color: #343a40 !important;
+    width: 68px;
+    height: 68px;
+    border-radius: 40px;
+  }
+}
+
+main #arrowContact i {
+  color: black;
+}
+
+@media screen and (orientation: portrait) {
+  main #arrowContact i {
+    color: #ffcc00;
+  }
+}
+
+main #arrowContact:hover {
+  background-color: black !important;
+}
+
+main #arrowContact:hover i {
+  color: #ffcc00 !important;
+}
+
 main #iIcon {
   background-color: black;
   -webkit-transition: all 0.3s linear;
@@ -839,14 +1062,43 @@ main .buttonHover {
 main .buttonHover #policy {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  opacity: 1;
+  opacity: 0;
   position: relative;
   left: -300px;
+}
+
+@media screen and (max-width: 575px) {
+  main .buttonHover #policy {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  main .buttonHover #policy {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  main .buttonHover #policy {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  main .buttonHover #policy {
+    opacity: 1;
+    left: 0px;
+  }
 }
 
 main .buttonHover a {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  color: black !important;
 }
 
 main .buttonHover:hover button {

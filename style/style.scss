@@ -73,7 +73,7 @@ main{
         &:hover{
             background-color: $skewShapeColor !important;
             i{
-                color: black !important;
+                color: $colorBlack !important;
             }
         }
         @include mQportrait{
@@ -519,6 +519,172 @@ main{
     .blurBox{
         mask: linear-gradient( transparent 0%, black 10%, black 90%, transparent 100%);
     }
+    .contactHeader{
+        background-color: $colorBlack !important;
+        position: absolute;
+        opacity: 0.7;
+        z-index: 1;
+        @include mQportrait{
+            background-color: $colorDark !important;
+            opacity: 1;
+        }
+        h1{
+            font-size: 3.5rem;
+            @include mQportrait{
+                font-size: 2.5rem;
+            }
+            @include mQtablet{
+                font-size: 2.5rem;
+            }
+            @include mQmobileMedium{
+                font-size: 2rem;
+                padding-top: 15px;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+            }
+            @include mQmobileSmall{
+                font-size: 2rem;
+                padding-top: 15px;
+                padding-bottom: 0px;
+                margin-bottom: 15px;
+            }
+            @include mQpanoram{
+                font-size: 2.5rem;
+                padding-top: 10px;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .welcomeWraperContact{
+        @extend .welcomeWraper;
+        @include mQportrait {
+            width: 100vw;
+        }
+    }
+    #contactText{
+        z-index: 1;
+        @include mQfullHD{
+            h2{
+                font-size: 2.2rem;
+                margin-top: 20px !important;
+            }
+            h3{
+                font-size: 2.2rem;
+            }
+            p, a{
+                font-size: 2rem;
+            }           
+        }
+        @include mQlandscape{
+            margin-top: 30px !important;
+            margin-left: -20px !important;
+        }
+        @include mQpanoram{
+            margin-top: 30px !important;
+            margin-left: -100px !important;
+            h2, h3, p{
+                text-align: left;
+            }
+        }
+        @include mQportrait{
+            margin-top: 10px !important;
+            text-align: center;
+            div{
+                margin: auto;
+            }
+            p, h3, h2{
+                text-align: center;
+            }
+            i{
+                font-size: 4rem;
+            }       
+        }
+        @include mQtablet{
+            h2{
+                font-size: 1.8rem;
+            }
+            h3{
+                font-size: 1.5rem;
+            }
+            p, a{
+                font-size: 1.4rem;
+            } 
+        }
+        @include mQmobileMedium{
+            padding-top: 0px !important;
+            margin-top: 20px !important;
+            margin-left: -160px !important;
+            h2{
+                font-size: 1rem;
+                text-align: left;
+            }
+            h3{
+                font-size: 1rem;
+                text-align: left;
+            }
+            p, a{
+                font-size: 1rem;
+                text-align: left;
+            }
+        }
+        @include mQpanoramWide{
+            padding-top: 10px !important;
+            margin-top: 20px !important;
+            margin-left: -50vw !important;
+            h2{
+                font-size: 2.5rem;
+                text-align: left;
+            }
+            h3{
+                font-size: 2.5rem;
+                text-align: left;
+            }
+            p, a{
+                font-size: 2.2rem;
+                text-align: left;
+            }
+            i{
+                font-size: 3rem;
+            }
+        }
+        .bigIcon{
+            font-size: 6rem;
+            @include mQfullHD{
+                font-size: 9rem;  
+            }
+            @include mQmobileMedium{
+                font-size: 3rem;       
+            }
+            @include mQmobileLarge{
+                font-size: 5rem;       
+            }
+        }
+    }
+    #arrowContact{
+        @extend #arrow;
+        left: 49vw;
+        background-color: $skewShapeColor !important;
+        @include mQportrait{
+            left: 0vw;    
+            background-color: $colorDark !important;
+            width: $btnSize*1.7;
+            height: $btnSize*1.7;
+            border-radius: $btnSize;
+        }
+        i{
+            color: $colorBlack;
+            @include mQportrait{
+                color: $skewShapeColor;  
+            }
+        }
+        &:hover{
+            background-color: $colorBlack !important;
+            i{
+                color: $skewShapeColor !important;
+            }
+        }
+    }
     #iIcon{
         background-color: $colorBlack;
         transition: all $btnChangeSpeed linear;
@@ -537,12 +703,29 @@ main{
     .buttonHover{
         #policy{
             transition: all $btnChangeSpeed linear;
-            opacity: 1;
+            opacity: 0;
             position: relative;
             left: -300px;
+            @include mQmobileSmall{
+                opacity: 1;
+                left: 0px;    
+            }
+            @include mQmobileMedium{
+                opacity: 1;
+                left: 0px;    
+            }
+            @include mQmobileLarge{
+                opacity: 1;
+                left: 0px;    
+            }
+            @include mQtablet{
+                opacity: 1;
+                left: 0px;    
+            }
         }
         a{
             transition: all $btnChangeSpeed linear;
+            color: $colorBlack !important;
         }
         cursor: pointer;
         &:hover{
