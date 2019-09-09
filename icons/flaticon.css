@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 02/09/2019 15:03
+  	Creation date: 09/09/2019 07:37
   	*/
 
 @font-face {
@@ -25,15 +25,16 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        /* font-size: 20px; */
+        font-size: 1em;
 font-style: normal;
-/* margin-left: 20px; */
+margin-left: auto;
 }
 
-.flaticon-arrow:before { content: "\f100"; }
-.flaticon-support:before { content: "\f101"; }
-.flaticon-helmet:before { content: "\f102"; }
-.flaticon-speed:before { content: "\f103"; }
-.flaticon-phone:before { content: "\f104"; }
-.flaticon-facebook:before { content: "\f105"; }
-.flaticon-mail:before { content: "\f106"; }
+.flaticon-information-symbol:before { content: "\f100"; }
+.flaticon-customer-support:before { content: "\f101"; }
+.flaticon-speedometer:before { content: "\f102"; }
+.flaticon-helmet:before { content: "\f103"; }
+.flaticon-telephone-symbol-button:before { content: "\f104"; }
+.flaticon-facebook-logo:before { content: "\f105"; }
+.flaticon-envelope:before { content: "\f106"; }
+.flaticon-chevron-arrow-down:before { content: "\f107"; }

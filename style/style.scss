@@ -519,6 +519,45 @@ main{
     .blurBox{
         mask: linear-gradient( transparent 0%, black 10%, black 90%, transparent 100%);
     }
+    #iIcon{
+        background-color: $colorBlack;
+        transition: all $btnChangeSpeed linear;
+        box-shadow: none;
+        button{
+            width: $btnSize*2;
+            height: $btnSize*2;
+            border-radius: $btnSize;
+            transition: all $btnChangeSpeed linear;
+            box-shadow: none;
+        }
+        .hiddenBox{
+            overflow: hidden;
+        }
+    }
+    .buttonHover{
+        #policy{
+            transition: all $btnChangeSpeed linear;
+            opacity: 1;
+            position: relative;
+            left: -300px;
+        }
+        a{
+            transition: all $btnChangeSpeed linear;
+        }
+        cursor: pointer;
+        &:hover{
+            button{
+               background-color: $colorBlack !important;
+            }
+            #policy{
+                opacity: 1;
+                left: 0px;
+            }
+            a{
+                color: $colorLight !important;
+            }
+        }
+    }
 }
 .modal{
     p{
@@ -533,7 +572,3 @@ main{
         font-size: 0.8rem;
     }
 }
-
-    
-
-

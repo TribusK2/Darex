@@ -810,6 +810,58 @@ main .blurBox {
           mask: linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
+main #iIcon {
+  background-color: black;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main #iIcon button {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main #iIcon .hiddenBox {
+  overflow: hidden;
+}
+
+main .buttonHover {
+  cursor: pointer;
+}
+
+main .buttonHover #policy {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  opacity: 1;
+  position: relative;
+  left: -300px;
+}
+
+main .buttonHover a {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+main .buttonHover:hover button {
+  background-color: black !important;
+}
+
+main .buttonHover:hover #policy {
+  opacity: 1;
+  left: 0px;
+}
+
+main .buttonHover:hover a {
+  color: #f8f9fa !important;
+}
+
 .modal p {
   text-indent: 1em;
 }
