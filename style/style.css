@@ -111,25 +111,25 @@ main #arrow:hover i, main #arrowContact:hover i {
 
 @media screen and (min-width: 1441px) {
   main #arrow, main #arrowContact {
-    width: 120px;
-    height: 120px;
-    border-radius: 60px;
+    width: 112px;
+    height: 112px;
+    border-radius: 56px;
   }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #arrow, main #arrowContact {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    width: 96px;
+    height: 96px;
+    border-radius: 48px;
   }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main #arrow, main #arrowContact {
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
   }
 }
 
@@ -149,19 +149,19 @@ main #section1 i {
 
 @media screen and (min-width: 1441px) {
   main #section1 i {
-    font-size: 80px;
+    font-size: 74.66667px;
   }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #section1 i {
-    font-size: 66.66667px;
+    font-size: 64px;
   }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main #section1 i {
-    font-size: 53.33333px;
+    font-size: 48px;
   }
 }
 
@@ -178,25 +178,25 @@ main #section2 i {
 
 @media screen and (min-width: 1441px) {
   main #section2 i {
-    font-size: 92.30769px;
+    font-size: 86.15385px;
   }
 }
 
 @media screen and (orientation: portrait) {
   main #section2 i {
-    font-size: 60px;
+    font-size: 56px;
   }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #section2 i {
-    font-size: 76.92308px;
+    font-size: 73.84615px;
   }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main #section2 i {
-    font-size: 61.53846px;
+    font-size: 55.38462px;
   }
 }
 
@@ -837,16 +837,32 @@ main .contactHeader h1 {
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main .contactHeader h1 {
     font-size: 2.5rem;
-    padding-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  main .contactHeader h1 {
+    font-size: 2.5rem;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
+  main .contactHeader h1 {
+    font-size: 2rem;
+    padding-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
   main .contactHeader h1 {
     font-size: 1.8rem;
-    padding-top: 18px;
-    margin-bottom: 0px;
+    padding-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -855,14 +871,6 @@ main .contactHeader h1 {
     font-size: 1.5rem;
     padding-top: 15px;
     margin-bottom: 15px;
-  }
-}
-
-@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
-  main .contactHeader h1 {
-    font-size: 1.5rem;
-    padding-top: 20px;
-    margin-bottom: 0px;
   }
 }
 
@@ -921,20 +929,26 @@ main #contactText p, main #contactText a {
   main #contactText p, main #contactText a {
     font-size: 1rem;
   }
+  main #contactText i {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
   main #contactText h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: left;
   }
   main #contactText h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: left;
   }
   main #contactText p, main #contactText a {
     font-size: 1rem;
     text-align: left;
+  }
+  main #contactText i {
+    font-size: 2.5rem;
   }
 }
 
@@ -1015,7 +1029,7 @@ main #contactText .bigIcon {
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
   main #contactText .bigIcon {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
@@ -1051,9 +1065,9 @@ main #arrowContact {
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main #arrowContact {
-    width: 96px;
-    height: 96px;
-    border-radius: 80px;
+    width: 86.4px;
+    height: 86.4px;
+    border-radius: 72px;
   }
 }
 
@@ -1154,6 +1168,13 @@ main .buttonHover:hover #policy {
 
 main .buttonHover:hover a {
   color: #f8f9fa !important;
+}
+
+main .policyBtn {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 100%;
+  height: 7vh;
 }
 
 .modal p {

@@ -65,7 +65,7 @@ myApp.controller('referencesCtrl', ['$scope','$http', function($scope, $http){
         let anchor = document.getElementById('galleryAnchor');
         if (anchor) {
             window.scrollTo({
-                top: anchor.offsetTop,
+                top: anchor.offsetTop -50,
                 behavior: 'smooth',
             });
         }
