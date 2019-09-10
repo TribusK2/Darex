@@ -139,6 +139,10 @@ main #arrow:hover i, main #arrowContact:hover i {
   }
 }
 
+main #section1 {
+  overflow: hidden;
+}
+
 main #section1 i {
   font-size: 26.66667px;
   line-height: 1;
@@ -400,8 +404,14 @@ main .welcomeBox, main .welcomeBox--solid, main .referencesBox--solid, main .ref
 @media screen and (orientation: portrait) {
   main .welcomeBox, main .welcomeBox--solid, main .referencesBox--solid, main .referencesBox {
     width: 100vw;
-    -webkit-transform: translateY(14vh);
-            transform: translateY(14vh);
+    top: 15vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main .welcomeBox, main .welcomeBox--solid, main .referencesBox--solid, main .referencesBox {
+    width: 100vw;
+    top: 20vh;
   }
 }
 
