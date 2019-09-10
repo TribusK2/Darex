@@ -79,9 +79,9 @@ main #iconFacebook {
 }
 
 main #arrow, main #arrowContact {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
   position: absolute;
   bottom: 2vh;
   left: 10vw;
@@ -119,17 +119,17 @@ main #arrow:hover i, main #arrowContact:hover i {
 
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #arrow, main #arrowContact {
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
   }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main #arrow, main #arrowContact {
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
   }
 }
 
@@ -155,13 +155,13 @@ main #section1 i {
 
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #section1 i {
-    font-size: 53.33333px;
+    font-size: 66.66667px;
   }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main #section1 i {
-    font-size: 40px;
+    font-size: 53.33333px;
   }
 }
 
@@ -190,13 +190,13 @@ main #section2 i {
 
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
   main #section2 i {
-    font-size: 61.53846px;
+    font-size: 76.92308px;
   }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main #section2 i {
-    font-size: 46.15385px;
+    font-size: 61.53846px;
   }
 }
 
@@ -819,7 +819,7 @@ main .contactHeader {
 
 @media screen and (orientation: portrait) {
   main .contactHeader {
-    background-color: #343a40 !important;
+    background-color: black !important;
     opacity: 1;
   }
 }
@@ -837,33 +837,40 @@ main .contactHeader h1 {
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main .contactHeader h1 {
     font-size: 2.5rem;
+    padding-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
   main .contactHeader h1 {
-    font-size: 2rem;
-    padding-top: 15px;
-    padding-bottom: 0px;
+    font-size: 1.8rem;
+    padding-top: 18px;
     margin-bottom: 0px;
   }
 }
 
 @media screen and (max-width: 575px) {
   main .contactHeader h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-top: 15px;
-    padding-bottom: 0px;
     margin-bottom: 15px;
   }
 }
 
 @media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
   main .contactHeader h1 {
-    font-size: 2.5rem;
-    padding-top: 10px;
-    padding-bottom: 0px;
+    font-size: 1.5rem;
+    padding-top: 20px;
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  main .contactHeader h1 {
+    font-size: 3.5rem;
+    padding-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -875,12 +882,26 @@ main .contactHeader h1 {
 
 main #contactText {
   z-index: 1;
+  -webkit-transform: translateY(-81vh);
+          transform: translateY(-81vh);
+  margin-bottom: -81vh !important;
+}
+
+main #contactText h2 {
+  font-size: 1.7rem;
+}
+
+main #contactText h3 {
+  font-size: 1.5rem;
+}
+
+main #contactText p, main #contactText a {
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 1441px) {
   main #contactText h2 {
     font-size: 2.2rem;
-    margin-top: 20px !important;
   }
   main #contactText h3 {
     font-size: 2.2rem;
@@ -890,33 +911,62 @@ main #contactText {
   }
 }
 
-@media screen and (orientation: landscape) {
-  main #contactText {
-    margin-top: 30px !important;
-    margin-left: -20px !important;
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  main #contactText h2 {
+    font-size: 1.4rem;
+  }
+  main #contactText h3 {
+    font-size: 1.2rem;
+  }
+  main #contactText p, main #contactText a {
+    font-size: 1rem;
   }
 }
 
-@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
-  main #contactText {
-    margin-top: 30px !important;
-    margin-left: -100px !important;
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  main #contactText h2 {
+    font-size: 1rem;
+    text-align: left;
   }
-  main #contactText h2, main #contactText h3, main #contactText p {
+  main #contactText h3 {
+    font-size: 1rem;
+    text-align: left;
+  }
+  main #contactText p, main #contactText a {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main #contactText h2 {
+    font-size: 1rem;
+    text-align: left;
+  }
+  main #contactText h3 {
+    font-size: 1rem;
+    text-align: left;
+  }
+  main #contactText p, main #contactText a {
+    font-size: 1rem;
     text-align: left;
   }
 }
 
 @media screen and (orientation: portrait) {
   main #contactText {
-    margin-top: 10px !important;
     text-align: center;
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
+    margin-bottom: -1vh !important;
+    margin-left: 0px !important;
   }
   main #contactText div {
     margin: auto;
   }
-  main #contactText p, main #contactText h3, main #contactText h2 {
+  main #contactText p, main #contactText a, main #contactText h3, main #contactText h2 {
     text-align: center;
+    font-size: 1.3rem;
   }
   main #contactText i {
     font-size: 4rem;
@@ -925,56 +975,25 @@ main #contactText {
 
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   main #contactText h2 {
+    font-size: 1.6rem;
+  }
+  main #contactText h3 {
+    font-size: 1.4rem;
+  }
+  main #contactText p, main #contactText a {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  main #contactText h2 {
     font-size: 1.8rem;
   }
   main #contactText h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   main #contactText p, main #contactText a {
     font-size: 1.4rem;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  main #contactText {
-    padding-top: 0px !important;
-    margin-top: 20px !important;
-    margin-left: -160px !important;
-  }
-  main #contactText h2 {
-    font-size: 1rem;
-    text-align: left;
-  }
-  main #contactText h3 {
-    font-size: 1rem;
-    text-align: left;
-  }
-  main #contactText p, main #contactText a {
-    font-size: 1rem;
-    text-align: left;
-  }
-}
-
-@media screen and (min-aspect-ratio: 10 / 4) {
-  main #contactText {
-    padding-top: 10px !important;
-    margin-top: 20px !important;
-    margin-left: -50vw !important;
-  }
-  main #contactText h2 {
-    font-size: 2.5rem;
-    text-align: left;
-  }
-  main #contactText h3 {
-    font-size: 2.5rem;
-    text-align: left;
-  }
-  main #contactText p, main #contactText a {
-    font-size: 2.2rem;
-    text-align: left;
-  }
-  main #contactText i {
-    font-size: 3rem;
   }
 }
 
@@ -985,6 +1004,12 @@ main #contactText .bigIcon {
 @media screen and (min-width: 1441px) {
   main #contactText .bigIcon {
     font-size: 9rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main #contactText .bigIcon {
+    font-size: 3rem;
   }
 }
 
@@ -1000,18 +1025,35 @@ main #contactText .bigIcon {
   }
 }
 
+@media screen and (orientation: portrait) {
+  main #contactText .bigIcon {
+    font-size: 5rem;
+  }
+}
+
 main #arrowContact {
+  z-index: 2;
   left: 49vw;
   background-color: #ffcc00 !important;
 }
 
 @media screen and (orientation: portrait) {
   main #arrowContact {
+    position: relative;
     left: 0vw;
-    background-color: #343a40 !important;
+    background-color: black !important;
     width: 68px;
     height: 68px;
     border-radius: 40px;
+    top: 15vh;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  main #arrowContact {
+    width: 96px;
+    height: 96px;
+    border-radius: 80px;
   }
 }
 

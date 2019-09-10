@@ -61,9 +61,9 @@ main{
         }
     }
     #arrow{
-        width: $btnSize;
-        height: $btnSize;
-        border-radius: $btnSize/2;
+        width: $btnSize*1.5;
+        height: $btnSize*1.5;
+        border-radius: $btnSize;
         position: absolute;
         bottom: 2vh;
         left: 10vw;
@@ -525,7 +525,7 @@ main{
         opacity: 0.7;
         z-index: 1;
         @include mQportrait{
-            background-color: $colorDark !important;
+            background-color: $colorBlack !important;
             opacity: 1;
         }
         h1{
@@ -535,24 +535,28 @@ main{
             }
             @include mQtablet{
                 font-size: 2.5rem;
+                padding-top: 20px;
+                margin-bottom: 20px;
             }
             @include mQmobileMedium{
-                font-size: 2rem;
-                padding-top: 15px;
-                padding-bottom: 0px;
+                font-size: 1.8rem;
+                padding-top: 18px;
                 margin-bottom: 0px;
             }
             @include mQmobileSmall{
-                font-size: 2rem;
+                font-size: 1.5rem;
                 padding-top: 15px;
-                padding-bottom: 0px;
                 margin-bottom: 15px;
             }
             @include mQpanoram{
-                font-size: 2.5rem;
-                padding-top: 10px;
-                padding-bottom: 0px;
+                font-size: 1.5rem;
+                padding-top: 20px;
                 margin-bottom: 0px;
+            }
+            @include mQfullHD{
+                font-size: 3.5rem;
+                padding-top: 10px;
+                margin-bottom: 10px;
             }
         }
     }
@@ -564,10 +568,21 @@ main{
     }
     #contactText{
         z-index: 1;
+        transform: translateY(-(90vh - ($topSpace)));
+        margin-bottom: -(90vh - ($topSpace)) !important;
+        h2{
+            font-size: 1.7rem;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+        p, a{
+            font-size: 1.5rem;
+        } 
+        
         @include mQfullHD{
             h2{
                 font-size: 2.2rem;
-                margin-top: 20px !important;
             }
             h3{
                 font-size: 2.2rem;
@@ -576,25 +591,56 @@ main{
                 font-size: 2rem;
             }           
         }
-        @include mQlandscape{
-            margin-top: 30px !important;
-            margin-left: -20px !important;
+        @include mQmobileLarge{
+            h2{
+                font-size: 1.4rem;
+            }
+            h3{
+                font-size: 1.2rem;
+            }
+            p, a{
+                font-size: 1rem;
+            }           
         }
-        @include mQpanoram{
-            margin-top: 30px !important;
-            margin-left: -100px !important;
-            h2, h3, p{
+        @include mQmobileMedium{
+            h2{
+                font-size: 1rem;
+                text-align: left;
+            }
+            h3{
+                font-size: 1rem;
+                text-align: left;
+            }
+            p, a{
+                font-size: 1rem;
+                text-align: left;
+            }
+        }
+        @include mQmobileSmall{
+            h2{
+                font-size: 1rem;
+                text-align: left;
+            }
+            h3{
+                font-size: 1rem;
+                text-align: left;
+            }
+            p, a{
+                font-size: 1rem;
                 text-align: left;
             }
         }
         @include mQportrait{
-            margin-top: 10px !important;
             text-align: center;
+            transform: translateY(-(10vh - ($topSpace)));
+            margin-bottom: -(10vh - ($topSpace)) !important;
+            margin-left: 0px !important;
             div{
                 margin: auto;
             }
-            p, h3, h2{
+            p, a, h3, h2{
                 text-align: center;
+                font-size: 1.3rem;
             }
             i{
                 font-size: 4rem;
@@ -602,56 +648,34 @@ main{
         }
         @include mQtablet{
             h2{
+                font-size: 1.6rem;
+            }
+            h3{
+                font-size: 1.4rem;
+            }
+            p, a{
+                font-size: 1.2rem;
+            }           
+        }
+        @include mQlaptop{
+            h2{
                 font-size: 1.8rem;
             }
             h3{
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
             p, a{
                 font-size: 1.4rem;
-            } 
+            }           
         }
-        @include mQmobileMedium{
-            padding-top: 0px !important;
-            margin-top: 20px !important;
-            margin-left: -160px !important;
-            h2{
-                font-size: 1rem;
-                text-align: left;
-            }
-            h3{
-                font-size: 1rem;
-                text-align: left;
-            }
-            p, a{
-                font-size: 1rem;
-                text-align: left;
-            }
-        }
-        @include mQpanoramWide{
-            padding-top: 10px !important;
-            margin-top: 20px !important;
-            margin-left: -50vw !important;
-            h2{
-                font-size: 2.5rem;
-                text-align: left;
-            }
-            h3{
-                font-size: 2.5rem;
-                text-align: left;
-            }
-            p, a{
-                font-size: 2.2rem;
-                text-align: left;
-            }
-            i{
-                font-size: 3rem;
-            }
-        }
+
         .bigIcon{
             font-size: 6rem;
             @include mQfullHD{
                 font-size: 9rem;  
+            }
+            @include mQmobileSmall{
+                font-size: 3rem;  
             }
             @include mQmobileMedium{
                 font-size: 3rem;       
@@ -659,18 +683,29 @@ main{
             @include mQmobileLarge{
                 font-size: 5rem;       
             }
+            @include mQportrait{
+                font-size: 5rem;       
+            }
         }
     }
     #arrowContact{
         @extend #arrow;
+        z-index: 2;
         left: 49vw;
         background-color: $skewShapeColor !important;
         @include mQportrait{
+            position: relative;
             left: 0vw;    
-            background-color: $colorDark !important;
+            background-color: $colorBlack !important;
             width: $btnSize*1.7;
             height: $btnSize*1.7;
             border-radius: $btnSize;
+            top: 15vh;
+        }
+        @include mQtablet{
+            width: $btnSizeTablet*1.2;
+            height: $btnSizeTablet*1.2;
+            border-radius: $btnSizeTablet;
         }
         i{
             color: $colorBlack;
