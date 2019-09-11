@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
-myApp.config(['$routeProvider', function($routeProvider) {
+myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
     .when("/", {
         templateUrl : "main.html",
@@ -25,10 +25,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
 myApp.controller('headerCtrl', ['$scope', '$location', function($scope, $location){
     
     // top scroll function on nemu items
-    $scope.isActive = function (viewLocation) {
+    $scope.isActive = function (viewLocation){
         return viewLocation === $location.path();
     };
-    $scope.scrollTop = function() {
+    $scope.scrollTop = function(){
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
@@ -40,7 +40,7 @@ myApp.controller('headerCtrl', ['$scope', '$location', function($scope, $locatio
 myApp.controller('mainCtrl', ['$scope', function($scope){
     
     // scroll function on arrow button
-    $scope.scrollSection2 = function() {
+    $scope.scrollSection2 = function(){
         let anchor = document.getElementById('section2');
         if (anchor) {
             window.scrollTo({
@@ -49,6 +49,20 @@ myApp.controller('mainCtrl', ['$scope', function($scope){
             });
         }
     };
+
+    // collapse button animation
+    $scope.turnBtn = function(element){
+        let div = element.currentTarget;
+        let btn = div.querySelector('button');
+        let back = div.querySelector('div');
+        if(div.classList.contains('collapsed')){
+            btn.style.transform = 'rotateX(180deg)';
+            back.style.top = '0px';
+        }else{
+            btn.style.transform = 'rotateX(0deg)';
+            back.style.top = '-8px';
+        }
+    }
     
 }]);
 
@@ -74,7 +88,7 @@ myApp.controller('referencesCtrl', ['$scope','$http', function($scope, $http){
     // define hight of gallery
     let parentBoxHeight = $('.refContentBox').css('height');
     $('.gallery').css('height', parentBoxHeight);
-    $(window).resize(function() {
+    $(window).resize(function(){
         let parentBoxHeight = $('.refContentBox').css('height');
         $('.gallery').css('height', parentBoxHeight);
     });
@@ -91,7 +105,7 @@ myApp.controller('referencesCtrl', ['$scope','$http', function($scope, $http){
 myApp.controller('contactCtrl', ['$scope', function($scope){
     
     // scroll function on arrow button
-    $scope.scrolliIcon = function() {
+    $scope.scrolliIcon = function(){
         let anchor = document.getElementById('iIcon');
         if (anchor) {
             window.scrollTo({

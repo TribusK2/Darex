@@ -30,48 +30,78 @@
     <!-- main content -->
     <section id="section2" class="row mx-0">
     
-      <div class="col-12 col-sm-11 row px-sm-1 justify-content-between mx-auto px-lg-5">
-        <div class="col-12 sectionBoxWhite bg-light"></div>
-        <!-- first content box -->
-        <div class="col-12 col-sm-6 pl-sm-0 col-lg-4 my-5 mb-lg-1">
-          <h2 class="h2 px-2 text-dark text-center mb-0 bg-light bg-md-none">
-            <span class="text-warning">Serwis</span><span class="text-secondary"> i </span>Konserwacja
-          </h2>
-          <p class="text-justify box1 p-2">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum reprehenderit provident dicta sit hic, excepturi dolorum corporis distinctio, accusantium quo exercitationem eveniet nostrum laborum, harum nesciunt minima quisquam nisi iusto!
-          </p>
-        </div>
-        <!-- first content box end -->
+		<div class="col-12 col-sm-11 row px-sm-1 justify-content-between mx-auto px-lg-5">
+			<div class="col-12 sectionBoxWhite bg-light"></div>
+			<!-- first content box -->
+			<div class="col-12 col-sm-6 pl-sm-0 col-lg-4 my-5 mb-lg-1">
+				<h2 class="h2 px-2 text-dark text-center mb-0 bg-light bg-md-none">
+					<span class="text-warning">Serwis</span><span class="text-secondary"> i </span>Konserwacja
+				</h2>
+				<div class="box1">
+					<p class="text-justify pt-2 px-2 mb-0">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum reprehenderit provident dicta sit hic, excepturi dolorum corporis distinctio, accusantium quo exercitationem eveniet nostrum laborum, harum nesciunt minima quisquam nisi iusto!
+					</p>
+					<p id="collapseText1" class="text-justify px-2 mb-0 collapse">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum reprehenderit provident dicta sit hic, excepturi dolorum corporis distinctio, accusantium quo exercitationem eveniet nostrum laborum, harum nesciunt minima quisquam nisi iusto!
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum reprehenderit provident dicta sit hic, excepturi dolorum corporis distinctio, accusantium quo exercitationem eveniet nostrum laborum, harum nesciunt minima quisquam nisi iusto!
+					</p>
 
-        <!-- second content box -->
-        <div class="col-12 col-sm-6 pr-sm-0 col-lg-4 my-5 mb-lg-1">
-          <h2 class="h2 px-2 text-uppercase text-light bg-dark text-center mb-0">
-            O nas
-          </h2>
-          <p class="text-justify box2 p-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum corporis tempora placeat deleniti. Esse totam, similique, provident quis facilis accusamus aliquid in doloribus cumque commodi maiores distinctio maxime? Delectus?
-          </p>
-        </div>
-        <!-- second content box end -->
-      </div>
+					<div class="btnCollapse col text-right py-1 mt-3">
+						<div class="col mx-0 px-0 py-4 collapsed btn-poiter" ng-click="turnBtn($event)" data-toggle="collapse" data-target="#collapseText1" aria-expanded="false" aria-controls="collapseText1">
+							<div class="btnCollapseBack"></div>
+							<button ng-style="btnCollapseChange" class="btn btn-sm btn-outline outline-none shadow-none" type="button">
+								<i class="flaticon-chevron-arrow-down m-2"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- first content box end -->
+
+			<!-- second content box -->
+			<div class="col-12 col-sm-6 pr-sm-0 col-lg-4 my-5 mb-lg-1">
+				<h2 class="h2 px-2 text-uppercase text-light bg-dark text-center mb-0">
+					O nas
+				</h2>
+				<div class="box2">
+					<p class="text-justify pt-2 px-2 mb-0">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum reprehenderit provident dicta sit hic, excepturi dolorum corporis distinctio, accusantium quo exercitationem eveniet nostrum laborum, harum nesciunt minima quisquam nisi iusto!
+					</p>
+					<p id="collapseText2" class="text-justify px-2 mb-0 collapse">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum reprehenderit provident dicta sit hic, excepturi dolorum corporis distinctio, accusantium quo exercitationem eveniet nostrum laborum, harum nesciunt minima quisquam nisi iusto!
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum reprehenderit provident dicta sit hic, excepturi dolorum corporis distinctio, accusantium quo exercitationem eveniet nostrum laborum, harum nesciunt minima quisquam nisi iusto!
+					</p>
+
+					<div class="btnCollapse col text-right py-1 mt-3">
+						<div class="col mx-0 px-0 py-4 collapsed btn-poiter" ng-click="turnBtn($event)" data-toggle="collapse" data-target="#collapseText2" aria-expanded="false" aria-controls="collapseText2">
+							<div class="btnCollapseBack"></div>
+							<button ng-style="btnCollapseChange" class="btn btn-sm btn-outline outline-none shadow-none" type="button">
+								<i class="flaticon-chevron-arrow-down m-2"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- second content box end -->
+		</div>
       
-      <!-- slogans -->
-      <div class="col-12 row justify-content-center mx-auto pt-2 pt-lg-0">
-        <div class="bottomBox bg-dark"></div>
-        <div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2">
-          <i class="flaticon-speedometer"></i>
-          <h3 id="header1" class="py-2 font-italic">Szybko</h3>
-        </div>
-        <div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2 mx-5">
-          <i class="flaticon-customer-support"></i>
-          <h3 id="header2" class="py-2 font-italic">Solidnie</h3>
-        </div>
-        <div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2">
-          <i class="flaticon-helmet"></i>
-          <h3 id="header3" class="py-2 font-italic">Bezpiecznie</h3>
-        </div>
-      </div>
-      <!-- slogans end -->
+		<!-- slogans -->
+		<div class="col-12 row justify-content-center mx-auto pt-2 pt-lg-0">
+			<div class="bottomBox bg-dark"></div>
+			<div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2">
+				<i class="flaticon-speedometer"></i>
+				<h3 id="header1" class="py-2 font-italic">Szybko</h3>
+			</div>
+			<div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2 mx-5">
+				<i class="flaticon-customer-support"></i>
+				<h3 id="header2" class="py-2 font-italic">Solidnie</h3>
+			</div>
+			<div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2">
+				<i class="flaticon-helmet"></i>
+				<h3 id="header3" class="py-2 font-italic">Bezpiecznie</h3>
+			</div>
+		</div>
+		<!-- slogans end -->
     </section>
     <!-- main content end -->
 </main>

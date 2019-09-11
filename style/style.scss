@@ -307,9 +307,48 @@ main{
     }
     .box1{
         background-color: $box1Color;
+        p{
+            text-indent: 1em;
+        }
     }
     .box2{
         background-color: $box2Color;
+        p{
+            text-indent: 1em;
+        }
+    }
+    .btnCollapse{
+        cursor: pointer;
+        i{
+            font-size: $btnSize/2 !important;
+            color: $colorBlack;
+        }
+        .btnCollapseBack{
+            background-color: $skewShapeColor;
+            top: -8px;
+            height: 40px;
+            width: 38px;
+            position: absolute;
+            right: 8px;
+            transition: top linear 0.2s 0.3s;
+        }
+        button{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            opacity: 0.5;
+            border-color: $colorBlack;
+            transition: transform linear 0.2s 0.3s;
+        }
+        &:hover{
+            button{
+                background-color: $colorBlack;
+                border-color: $colorBlack;
+            }
+            i{
+                color: $skewShapeColor !important;
+            }
+        }
     }
 
     // references

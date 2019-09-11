@@ -483,8 +483,57 @@ main .box1 {
   background-color: #f1f1f1;
 }
 
+main .box1 p {
+  text-indent: 1em;
+}
+
 main .box2 {
   background-color: #f1eace;
+}
+
+main .box2 p {
+  text-indent: 1em;
+}
+
+main .btnCollapse {
+  cursor: pointer;
+}
+
+main .btnCollapse i {
+  font-size: 20px !important;
+  color: black;
+}
+
+main .btnCollapse .btnCollapseBack {
+  background-color: #ffcc00;
+  top: -8px;
+  height: 40px;
+  width: 38px;
+  position: absolute;
+  right: 8px;
+  -webkit-transition: top linear 0.2s 0.3s;
+  transition: top linear 0.2s 0.3s;
+}
+
+main .btnCollapse button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  opacity: 0.5;
+  border-color: black;
+  -webkit-transition: -webkit-transform linear 0.2s 0.3s;
+  transition: -webkit-transform linear 0.2s 0.3s;
+  transition: transform linear 0.2s 0.3s;
+  transition: transform linear 0.2s 0.3s, -webkit-transform linear 0.2s 0.3s;
+}
+
+main .btnCollapse:hover button {
+  background-color: black;
+  border-color: black;
+}
+
+main .btnCollapse:hover i {
+  color: #ffcc00 !important;
 }
 
 @media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
