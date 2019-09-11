@@ -114,5 +114,24 @@ myApp.controller('contactCtrl', ['$scope', function($scope){
             });
         }
     };
+    // collapse button animation
+    $scope.toggleMap = function(element){
+        let btn = element.currentTarget;
+        let mapWraper = $('#mapWraper');
+        let map = $('#map');
+        if(btn.classList.contains('smallMap')){
+            btn.classList.remove('smallMap');
+            mapWraper.css('width', '80vw');
+            mapWraper.css('height', '80vh');
+            mapWraper.css('z-index', '2');
+            map.css('opacity', '1');
+        }else{
+            btn.classList.add('smallMap');
+            mapWraper.css('width', '30vw');
+            mapWraper.css('height', '30vh');
+            mapWraper.css('z-index', '1');
+            map.css('opacity', '0.7');
+        }
+    }
 
 }]);

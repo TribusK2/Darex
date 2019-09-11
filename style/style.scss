@@ -572,7 +572,7 @@ main{
         background-color: $colorBlack !important;
         position: absolute;
         opacity: 0.7;
-        z-index: 1;
+        z-index: 2;
         @include mQportrait{
             background-color: $colorBlack !important;
             opacity: 1;
@@ -783,7 +783,6 @@ main{
     #iIcon{
         background-color: $colorBlack;
         transition: all $btnChangeSpeed linear;
-        box-shadow: none;
         button{
             width: $btnSize*2;
             height: $btnSize*2;
@@ -840,6 +839,26 @@ main{
         transform: rotate(180deg);
         width: 100%;
         height: 7vh;
+    }
+    #mapWraper{
+        // padding-top: $topSpace;
+        z-index: 1;
+        position: absolute;
+        right: 0px;
+        width: 30vw;
+        height: 30vh;
+        transition: all linear 0.2s;
+        iframe{
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+            transition: all linear 0.2s;
+        }
+        button{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
     }
 }
 .modal{

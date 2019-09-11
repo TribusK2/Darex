@@ -1,8 +1,9 @@
 <main>
     <!-- main display -->
     <section id="section1" class="row mx-0">
+        <!-- background elements -->
         <div class="col px-0">
-            <div class="contactHeader col row mx-0 py-3 px-0 bg-dark">
+            <div class="contactHeader col row mx-0 py-3 px-0 bg-dark shadow">
                 <h1 class="h1 text-uppercase text-warning px-4 text-center mx-auto ml-xl-3">Skontaktuj się z nami</h1>
             </div>
             
@@ -17,7 +18,9 @@
 
             <img src="./img/contact-main.jpg" alt="Klucze serwisowe">
         </div>
+        <!-- background elements end -->
         
+        <!-- text display -->
         <div id="contactText" class="col-12 col-md-12 mx-0">
             <div class="row pt-4 mt-4 justify-content-start mx-2">
                 <div class="col-11 col-sm-10 col-md-6 text-center text-md-left px-0">
@@ -44,11 +47,22 @@
                 </div>           
             </div>
         </div>
+        <!-- text display end -->
+
+        <!-- map -->
+        <div id="mapWraper" class="row mx-0 px-0 shadow">
+            <div class="col mx-0 px-0">
+                <!-- <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=18.608007431030277%2C54.309513453509375%2C18.652210235595707%2C54.32278096945849&amp;layer=mapnik&amp;marker=54.31614774623799%2C18.63010883331299" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=54.3161&amp;mlon=18.6301#map=15/54.3161/18.6301">Wyświetl większą mapę</a></small> -->
+                <iframe id="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=18.608007431030277%2C54.309513453509375%2C18.652210235595707%2C54.32278096945849&amp;layer=mapnik&amp;marker=54.31614774623799%2C18.63010883331299"></iframe>
+                <button ng-click=toggleMap($event) class="btn btn-warning shadow smallMap">MAP</button>
+            </div>
+        </div>
+        <!-- map end --> 
     </section>
     <!-- main display end -->
     
     <!-- privacy policy -->
-    <div id="iIcon" class="buttonHover row mx-0 py-4" data-toggle="collapse" href="#policyText" role="button" aria-expanded="false" aria-controls="policyText">
+    <div id="iIcon" class="buttonHover row mx-0 py-4 shadow" data-toggle="collapse" href="#policyText" role="button" aria-expanded="false" aria-controls="policyText">
         <div class="col row mx-auto mx-sm-5 align-items-center justify-content-center">
             <div class="col-12 col-sm-1 mx-auto p-0 text-center text-sm-left">
                 <button class="btn bg-light mx-auto align-middle outline-none align-self-start">
@@ -62,7 +76,7 @@
     </div>
     <div id="policyText" class="row mx-0 justify-content-center bg-secondary collapse mx-auto">
         <div class="card col-12 col-md-8 py-3">
-            <div class="card-header bg-light text-dark p-3 text-center text-justify">
+            <div class="card-header bg-light text-dark p-3 text-center text-justify shadow">
                 <h4 class="h4 px-5 card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, molestiae!</h4>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
