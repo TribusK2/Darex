@@ -853,11 +853,27 @@ main{
             width: 100%;
             height: 100%;
             transition: all linear 0.2s;
+            
+            @include mQmobileSmall{
+                padding-top: 20px;       
+            }
+            @include mQmobileMedium{
+                padding-top: 15px;       
+            }
+            @include mQpanoram{
+                padding-top: 4px;       
+            }
+            @include mQportrait{
+                padding-top: 0px;       
+            }
         }
         button{
             position: absolute;
-            bottom: 20px;
-            left: 20px;
+            bottom: -20px;
+            left: -20px;
+        }
+        i{
+            font-size: 1em;
         }
     }
 }

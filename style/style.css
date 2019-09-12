@@ -1252,10 +1252,38 @@ main #mapWraper iframe {
   transition: all linear 0.2s;
 }
 
+@media screen and (max-width: 575px) {
+  main #mapWraper iframe {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  main #mapWraper iframe {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
+  main #mapWraper iframe {
+    padding-top: 4px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  main #mapWraper iframe {
+    padding-top: 0px;
+  }
+}
+
 main #mapWraper button {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: -20px;
+  left: -20px;
+}
+
+main #mapWraper i {
+  font-size: 1em;
 }
 
 .modal p {

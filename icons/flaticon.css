@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 09/09/2019 07:37
+  	Creation date: 12/09/2019 11:24
   	*/
 
 @font-face {
@@ -25,9 +25,9 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 1em;
+        /* font-size: 20px; */
 font-style: normal;
-margin-left: auto;
+/* margin-left: 20px; */
 }
 
 .flaticon-information-symbol:before { content: "\f100"; }
@@ -38,3 +38,5 @@ margin-left: auto;
 .flaticon-facebook-logo:before { content: "\f105"; }
 .flaticon-envelope:before { content: "\f106"; }
 .flaticon-chevron-arrow-down:before { content: "\f107"; }
+.flaticon-resize-option:before { content: "\f108"; }
+.flaticon-increase-size-option:before { content: "\f109"; }

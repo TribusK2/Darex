@@ -119,18 +119,25 @@ myApp.controller('contactCtrl', ['$scope', function($scope){
         let btn = element.currentTarget;
         let mapWraper = $('#mapWraper');
         let map = $('#map');
+        let btnIcon = btn.querySelector('i');
         if(btn.classList.contains('smallMap')){
-            btn.classList.remove('smallMap');
+            btn.classList.remove('smallMap', 'btn-warning');
+            btn.classList.add('btn-dark');
             mapWraper.css('width', '80vw');
             mapWraper.css('height', '80vh');
             mapWraper.css('z-index', '2');
             map.css('opacity', '1');
+            btnIcon.classList.remove('flaticon-increase-size-option', 'text-dark');
+            btnIcon.classList.add('flaticon-resize-option', 'text-warning');
         }else{
-            btn.classList.add('smallMap');
+            btn.classList.remove('btn-dark');
+            btn.classList.add('smallMap', 'btn-warning');
             mapWraper.css('width', '30vw');
             mapWraper.css('height', '30vh');
             mapWraper.css('z-index', '1');
             map.css('opacity', '0.7');
+            btnIcon.classList.remove('flaticon-resize-option', 'text-warning');
+            btnIcon.classList.add('flaticon-increase-size-option', 'text-dark');
         }
     }
 
