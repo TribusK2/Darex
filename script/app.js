@@ -37,7 +37,7 @@ myApp.controller('headerCtrl', ['$scope', '$location', function($scope, $locatio
 
 }]);
 
-myApp.controller('mainCtrl', ['$scope', function($scope){
+myApp.controller('mainCtrl', ['$scope', '$http', function($scope, $http){
     
     // scroll function on arrow button
     $scope.scrollSection2 = function(){
@@ -63,7 +63,17 @@ myApp.controller('mainCtrl', ['$scope', function($scope){
             back.style.top = '-8px';
         }
     }
-    
+
+    // modal data of slogans
+    $scope.sloganModal = function(i){
+        let self = this;
+        // get data of slogans
+        $http.get('./data/slogans.json').then(function(response){
+            $scope.slogans = response.data;
+            $scope.title = $scope.slogans[i].title;
+            $scope.description = $scope.slogans[i].description;
+        });
+    }
 }]);
 
 myApp.controller('referencesCtrl', ['$scope','$http', function($scope, $http){
@@ -140,5 +150,4 @@ myApp.controller('contactCtrl', ['$scope', function($scope){
             btnIcon.classList.add('flaticon-increase-size-option', 'text-dark');
         }
     }
-
 }]);

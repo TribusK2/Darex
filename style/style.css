@@ -536,6 +536,10 @@ main .btnCollapse:hover i {
   color: #ffcc00 !important;
 }
 
+main .buttonType {
+  cursor: pointer;
+}
+
 @media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
   main .referencesWraper {
     right: 0vw;

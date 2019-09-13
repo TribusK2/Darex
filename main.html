@@ -88,20 +88,38 @@
 		<!-- slogans -->
 		<div class="col-12 row justify-content-center mx-auto pt-2 pt-lg-0">
 			<div class="bottomBox bg-dark"></div>
-			<div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2">
+			<div class="buttonType col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2" ng-click="sloganModal(0)" data-toggle="modal" data-target="#sloganModal">
 				<i class="flaticon-speedometer"></i>
 				<h3 id="header1" class="py-2 font-italic">Szybko</h3>
 			</div>
-			<div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2 mx-5">
+			<div class="buttonType col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2 mx-5"  ng-click="sloganModal(1)" data-toggle="modal" data-target="#sloganModal">
 				<i class="flaticon-customer-support"></i>
 				<h3 id="header2" class="py-2 font-italic">Solidnie</h3>
 			</div>
-			<div class="col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2">
+			<div class="buttonType col-12 col-sm-3 mx-1 px-1 text-center text-dark my-4 mb-md-2"  ng-click="sloganModal(2)"  data-toggle="modal" data-target="#sloganModal">
 				<i class="flaticon-helmet"></i>
 				<h3 id="header3" class="py-2 font-italic">Bezpiecznie</h3>
 			</div>
 		</div>
 		<!-- slogans end -->
     </section>
-    <!-- main content end -->
+	<!-- main content end -->
+	
+	<!-- Modal -->
+	<div class="modal fade" id="sloganModal" tabindex="-1" role="dialog" aria-labelledby="sloganModal" aria-hidden="true">
+		<div class="modal-dialog modal modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title h3" id="sloganModalLabel">{{title}}</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="text-justify">{{description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal end -->
 </main>
