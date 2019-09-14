@@ -540,6 +540,23 @@ main .buttonType {
   cursor: pointer;
 }
 
+main .modalHeaderCustom {
+  height: 50px;
+}
+
+main .modalHeaderCustom span {
+  line-height: 1rem;
+}
+
+main .modalGraph {
+  height: 100%;
+  background-color: #ffcc0080;
+  position: absolute;
+  right: 0px;
+  -webkit-transform: skewX(-20deg) scaleX(2.5);
+          transform: skewX(-20deg) scaleX(2.5);
+}
+
 @media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
   main .referencesWraper {
     right: 0vw;

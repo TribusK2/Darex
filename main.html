@@ -109,14 +109,19 @@
 	<div class="modal fade" id="sloganModal" tabindex="-1" role="dialog" aria-labelledby="sloganModal" aria-hidden="true">
 		<div class="modal-dialog modal modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
+				<div class="modalHeaderCustom modal-header bg-dark text-warning py-0 align-items-center">
 					<h3 class="modal-title h3" id="sloganModalLabel">{{title}}</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
+						<span aria-hidden="true" class="text-warning align-text-top">&times;</span>
 					</button>
 				</div>
-				<div class="modal-body">
-					<p class="text-justify">{{description}}</p>
+				<div class="modal-body p-0 m-0">
+					<div class="row p-0 m-0">
+						<div class="modalGraph col-2"></div>
+						<div class="col-10 p-2">
+							<p class="text-justify m-1 p-1">{{description}}</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
