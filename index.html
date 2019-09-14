@@ -24,7 +24,7 @@
 <body ng-app = myApp>
     <header ng-controller="headerCtrl" class="row fixed-top m-0 p-0 shadow">
         <nav class="col navbar navbar-expand-lg navbar-light bg-light px-4">
-            <a class="navbar-brand p-0 m-0 pr-3" ng-click="scrollTop()"><img src="./img/logo.png" class="my-0 py-0" alt="Logo firmowe firmy Darex"></a>
+            <a class="navbar-brand p-0 m-0 pr-3" ng-click="scrollTop('smooth')"><img src="./img/logo.png" class="my-0 py-0" alt="Logo firmowe firmy Darex"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,13 +32,13 @@
             <div class="collapse navbar-collapse" id="navbarToggler">
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-center font-weight-bold h4">
                 <li class="nav-item px-3 py-lg-0">
-                  <a class="nav-link text-uppercase py-lg-0" ng-click="scrollTop()" ng-class="{active: isActive('/')}" data-toggle="collapse" data-target=".navbar-collapse.show" href="#!/">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link text-uppercase py-lg-0" ng-click="scrollTop('auto')" ng-class="{active: isActive('/')}" data-toggle="collapse" data-target=".navbar-collapse.show" href="#!/">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item px-3 py-lg-0">
-                  <a class="nav-link text-uppercase py-lg-0" ng-click="scrollTop()" ng-class="{active: isActive('/references')}" data-toggle="collapse" data-target=".navbar-collapse.show" href="#!/references">Realizacje</a>
+                  <a class="nav-link text-uppercase py-lg-0" ng-click="scrollTop('auto')" ng-class="{active: isActive('/references')}" data-toggle="collapse" data-target=".navbar-collapse.show" href="#!/references">Realizacje</a>
                 </li>
                 <li class="nav-item px-3 py-lg-0">
-                  <a class="nav-link text-uppercase py-lg-0" ng-click="scrollTop()" ng-class="{active: isActive('/contact')}" data-toggle="collapse" data-target=".navbar-collapse.show" href="#!/contact">Kontakt</a>
+                  <a class="nav-link text-uppercase py-lg-0" ng-click="scrollTop('auto')" ng-class="{active: isActive('/contact')}" data-toggle="collapse" data-target=".navbar-collapse.show" href="#!/contact">Kontakt</a>
                 </li>
               </ul>
             </div>
@@ -46,7 +46,7 @@
     </header>
 
     <!-- main -->
-    <div ng-view data-toggle="collapse" data-target=".navbar-collapse.show" class="mx-0"></div>
+	<div ng-view data-toggle="collapse" data-target=".navbar-collapse.show" class="mx-0 animate"></div>
     <!-- main end -->
 
     <footer class="row mx-0 bg-dark" data-toggle="collapse" data-target=".navbar-collapse.show">

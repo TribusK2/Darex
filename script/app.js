@@ -24,14 +24,14 @@ myApp.config(['$routeProvider', function($routeProvider){
 
 myApp.controller('headerCtrl', ['$scope', '$location', function($scope, $location){
     
-    // top scroll function on nemu items
+    // "top scroll" function on click nemu items
     $scope.isActive = function (viewLocation){
         return viewLocation === $location.path();
     };
-    $scope.scrollTop = function(){
+    $scope.scrollTop = function(behavior){
         window.scrollTo({
             top: 0,
-            behavior: 'smooth',
+            behavior: behavior,
         });
     };
 

@@ -1301,4 +1301,29 @@ main #mapWraper i {
 #copyright p, #copyright span {
   font-size: 0.8rem;
 }
+
+.animate {
+  -webkit-transition: 0.5s cubic-bezier(1, 0, 0.5, 1);
+  transition: 0.5s cubic-bezier(1, 0, 0.5, 1);
+}
+
+/* The starting CSS styles for the enter animation */
+.animate.ng-enter {
+  opacity: 0;
+}
+
+.animate.ng-leave.ng-leave-active {
+  opacity: 0;
+  -webkit-transition: 0s ease-out;
+  transition: 0s ease-out;
+}
+
+/* The finishing CSS styles for the enter animation */
+.animate.ng-leave {
+  opacity: 1;
+}
+
+.animate.ng-enter.ng-enter-active {
+  opacity: 1;
+}
 /*# sourceMappingURL=style.css.map */

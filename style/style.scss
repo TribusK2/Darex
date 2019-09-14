@@ -893,3 +893,25 @@ main{
         font-size: 0.8rem;
     }
 }
+
+// main animation
+.animate{
+    transition: 0.5s cubic-bezier(1,0,0.5,1);
+}
+
+/* The starting CSS styles for the enter animation */
+.animate.ng-enter {
+    opacity: 0;
+}
+.animate.ng-leave.ng-leave-active {
+    opacity: 0;
+    transition: 0s ease-out;
+}
+
+/* The finishing CSS styles for the enter animation */
+.animate.ng-leave {
+    opacity: 1;
+}
+.animate.ng-enter.ng-enter-active {
+    opacity: 1;
+}
