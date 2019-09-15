@@ -161,8 +161,11 @@ main{
             @include mQtabletPortrait{
                 height: 8vh;
             }
-            @include mQmobileLargePortraid{
+            @include mQmobileLargePortrait{
                 height: 5vh;
+            }
+            @include mQlaptopPortrait150{
+                height: 10vh;
             }
         }
         #header1{
@@ -243,8 +246,11 @@ main{
             @include mQtablet{
                 font-size: 4.5rem;
             }
-            @include mQmobileLargePortraid{
+            @include mQmobileLargePortrait{
                 font-size: 4rem;
+            }
+            @include mQmobileSmallLandscape{
+                font-size: 2rem;
             }
         }
     }
@@ -265,8 +271,12 @@ main{
             height: (100vh - ($topSpace));
             transform: skewX(-25deg);
         }
-        @include mQmobileLargePortraid{
+        @include mQmobileLargePortrait{
             width: 100vw;
+            top: 8vh;
+        }
+        @include mQmobileSmallLandscape{
+            width: 50vw;
             top: 8vh;
         }
         &--solid{
@@ -421,7 +431,7 @@ main{
             @include mQtablet{
                 font-size: 4.5rem;
             }
-            @include mQmobileLargePortraid{
+            @include mQmobileLargePortrait{
                 font-size: 4rem;
             }
         }
@@ -456,7 +466,7 @@ main{
             width: 100vw;
             transform: translateY(-7vh);
         }
-        @include mQmobileLargePortraid{
+        @include mQmobileLargePortrait{
             width: 100vw;
             transform: translateY(-4vh);
         }
@@ -488,12 +498,20 @@ main{
         transform: translateY(-(90vh - ($topSpace)));
         margin-bottom: -(90vh - ($topSpace));
         @include mQportrait{
-            transform: translateY(-(40vh - ($topSpace)));
+            transform: translateY(-(35vh - ($topSpace)));
             margin-bottom: -(35vh - ($topSpace));
             margin-left: auto !important;
             margin-right: auto !important;
         }
-        @include mQmobileLargePortraid{
+        @include mQtabletPortrait{
+            transform: translateY(-(40vh - ($topSpace)));
+            margin-bottom: -(40vh - ($topSpace));
+        }
+        @include mQmobileSmallLandscape{
+            transform: translateY(-(25vh - ($topSpace)));
+            margin-bottom: -(0vh - ($topSpace));
+        }
+        @include mQmobileLargePortrait{
             transform: translateY(-(25vh - ($topSpace)));
             margin-bottom: -(0vh - ($topSpace));
         }
@@ -552,6 +570,9 @@ main{
         cursor: pointer;
         box-shadow: 5px 5px 10px;
         z-index: 1;
+        @include mQmobileSmallLandscape {
+            padding-bottom: 25px !important;
+        }
         &:hover{
             background-color: $box5Color;
             .galleryArrow{
@@ -645,6 +666,10 @@ main{
                 padding-top: 15px;
                 margin-bottom: 15px;
             }
+            @include mQmobileSmallLandscape{
+                padding-top: 20px;
+                margin-bottom: 0px;
+            }
             @include mQfullHD{
                 font-size: 3.5rem;
                 padding-top: 10px;
@@ -728,6 +753,11 @@ main{
                 text-align: left;
             }
         }
+        @include mQmobileSmallLandscape{
+            h2{
+                padding-top: 20px;
+            }
+        }
         @include mQportrait{
             text-align: center;
             transform: translateY(-(10vh - ($topSpace)));
@@ -744,7 +774,7 @@ main{
                 font-size: 4rem;
             }       
         }
-        @include mQmobileLargePortraid{
+        @include mQmobileLargePortrait{
             margin-bottom: -(7vh - ($topSpace)) !important;    
         }
         @include mQtablet{

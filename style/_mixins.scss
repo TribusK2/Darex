@@ -38,8 +38,13 @@
         @content;
     }
 }
-@mixin mQtabletPortrait{ // from Bootstrap sm to Bootstrap md (portrait)
-    @media screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait){
+@mixin mQmobileSmallLandscape{ // up to Bootstrap sm (landscape)
+    @media screen and (max-width: 575px) and (orientation: landscape){
+        @content;
+    }
+}
+@mixin mQtabletPortrait{ // from Bootstrap md to Bootstrap lg (portrait)
+    @media screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait){
         @content;
     }
 }
@@ -53,7 +58,12 @@
         @content;
     }
 }
-@mixin mQmobileLargePortraid{ // from Bootstrap sm to Bootstrap lg (portrait)
+@mixin mQlaptopPortrait150{ // from Bootstrap sm to Bootstrap md (portrait)
+    @media screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait){
+        @content;
+    }
+}
+@mixin mQmobileLargePortrait{ // from Bootstrap sm to Bootstrap lg (portrait)
     @media screen and (min-width: 576px) and (max-width: 992px) and (orientation: portrait) and (max-aspect-ratio: 10/19){
         @content;
     }
