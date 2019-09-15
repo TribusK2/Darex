@@ -42,7 +42,7 @@
 			</div>
 			<div class="hiddenBorder col-12 col-sm-6 mx-0 px-0" ng-class="{'hiddenBorderView':checked}">
 				<div class="gallery pr-md-3 blurBox" ng-show="checked">
-					<img ng-repeat="pic in realizations" ng-src="/img/realizations/{{pic.file_name}}" ng-click="showModal()" class="img-fluid my-5" type="button" class="btn btn-primary" data-toggle="modal" data-target="#picModal" alt="{{pic.alt}}">
+					<img ng-repeat="pic in realizations" ng-src="img/realizations/{{pic.file_name}}" ng-click="showModal()" class="img-fluid my-5" type="button" class="btn btn-primary" data-toggle="modal" data-target="#picModal" alt="{{pic.alt}}">
 				</div>
 			</div>
 			<div id="galleryAnchor"></div>
@@ -63,7 +63,7 @@
 			</div>
 				<div class="modal-body">
 					<div class="modal-body text-center">
-						<img ng-src="/img/realizations/{{file_name}}" class="img-fluid mx-0 px-0" alt="{{alt}}">
+						<img ng-src="img/realizations/{{file_name}}" class="img-fluid mx-0 px-0" alt="{{alt}}">
 					</div>
 				</div>
 			<div class="modal-footer">

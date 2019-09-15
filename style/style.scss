@@ -161,6 +161,9 @@ main{
             @include mQtabletPortrait{
                 height: 8vh;
             }
+            @include mQmobileLargePortraid{
+                height: 5vh;
+            }
         }
         #header1{
             color: white;
@@ -181,20 +184,6 @@ main{
             }
         }
 
-    }
-    #section3{
-        overflow: hidden;
-        display: block;
-        height: auto;
-        .imgMain{
-            width: auto;
-            height: (90vh - ($topSpace));
-            float: left;
-            @include mQportrait{
-                width: 100%;
-                height: auto;
-            }
-        }
     }
     .welcomeWraper{
         width: 65vw;
@@ -254,6 +243,9 @@ main{
             @include mQtablet{
                 font-size: 4.5rem;
             }
+            @include mQmobileLargePortraid{
+                font-size: 4rem;
+            }
         }
     }
     .welcomeBox{
@@ -272,6 +264,10 @@ main{
         @include mQlandscape{
             height: (100vh - ($topSpace));
             transform: skewX(-25deg);
+        }
+        @include mQmobileLargePortraid{
+            width: 100vw;
+            top: 8vh;
         }
         &--solid{
             @extend .welcomeBox;
@@ -368,6 +364,20 @@ main{
     }
 
     // references
+    #section3{
+        overflow: hidden;
+        display: block;
+        height: auto;
+        .imgMain{
+            width: auto;
+            height: (90vh - ($topSpace));
+            float: left;
+            @include mQportrait{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
     .referencesWraper{
         @include mQpanoram{
             right: 0vw;
@@ -411,6 +421,9 @@ main{
             @include mQtablet{
                 font-size: 4.5rem;
             }
+            @include mQmobileLargePortraid{
+                font-size: 4rem;
+            }
         }
         .movedRight{
             right: -4vw;
@@ -441,7 +454,11 @@ main{
         @extend .welcomeBox;
         @include mQportrait{
             width: 100vw;
-            transform: translateY(7vh);
+            transform: translateY(-7vh);
+        }
+        @include mQmobileLargePortraid{
+            width: 100vw;
+            transform: translateY(-4vh);
         }
         @include mQlandscape{
                 height: (100vh - ($topSpace));
@@ -475,6 +492,10 @@ main{
             margin-bottom: -(35vh - ($topSpace));
             margin-left: auto !important;
             margin-right: auto !important;
+        }
+        @include mQmobileLargePortraid{
+            transform: translateY(-(25vh - ($topSpace)));
+            margin-bottom: -(0vh - ($topSpace));
         }
     }
     .galleryArrow{
@@ -723,6 +744,9 @@ main{
                 font-size: 4rem;
             }       
         }
+        @include mQmobileLargePortraid{
+            margin-bottom: -(7vh - ($topSpace)) !important;    
+        }
         @include mQtablet{
             h2{
                 font-size: 1.6rem;
@@ -912,7 +936,6 @@ main{
 .animate{
     transition: all 0.3s linear;
 }
-
 /* The starting CSS styles for the enter animation */
 .animate.ng-enter {
     opacity: 0;
@@ -925,7 +948,6 @@ main{
     transform-origin: 100% 0;
     transition: 0s ease-out;
 }
-
 /* The finishing CSS styles for the enter animation */
 .animate.ng-leave {
     opacity: 1;

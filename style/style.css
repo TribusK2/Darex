@@ -242,6 +242,12 @@ main #section2 .bottomBox {
   }
 }
 
+@media screen and (min-width: 576px) and (max-width: 992px) and (orientation: portrait) and (max-aspect-ratio: 10 / 19) {
+  main #section2 .bottomBox {
+    height: 5vh;
+  }
+}
+
 main #section2 #header1 {
   color: white;
 }
@@ -269,25 +275,6 @@ main #section2 #header3 {
 @media screen and (max-width: 575px) {
   main #section2 #header3 {
     color: white;
-  }
-}
-
-main #section3 {
-  overflow: hidden;
-  display: block;
-  height: auto;
-}
-
-main #section3 .imgMain {
-  width: auto;
-  height: 81vh;
-  float: left;
-}
-
-@media screen and (orientation: portrait) {
-  main #section3 .imgMain {
-    width: 100%;
-    height: auto;
   }
 }
 
@@ -394,6 +381,12 @@ main #welcomeText h1 {
   }
 }
 
+@media screen and (min-width: 576px) and (max-width: 992px) and (orientation: portrait) and (max-aspect-ratio: 10 / 19) {
+  main #welcomeText h1 {
+    font-size: 4rem;
+  }
+}
+
 main .welcomeBox, main .welcomeBox--solid, main .referencesBox--solid, main .referencesBox {
   background-color: #ffcc0080;
   width: 40vw;
@@ -420,6 +413,13 @@ main .welcomeBox, main .welcomeBox--solid, main .referencesBox--solid, main .ref
     height: 91vh;
     -webkit-transform: skewX(-25deg);
             transform: skewX(-25deg);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) and (orientation: portrait) and (max-aspect-ratio: 10 / 19) {
+  main .welcomeBox, main .welcomeBox--solid, main .referencesBox--solid, main .referencesBox {
+    width: 100vw;
+    top: 8vh;
   }
 }
 
@@ -557,6 +557,25 @@ main .modalGraph {
           transform: skewX(-20deg) scaleX(2.5);
 }
 
+main #section3 {
+  overflow: hidden;
+  display: block;
+  height: auto;
+}
+
+main #section3 .imgMain {
+  width: auto;
+  height: 81vh;
+  float: left;
+}
+
+@media screen and (orientation: portrait) {
+  main #section3 .imgMain {
+    width: 100%;
+    height: auto;
+  }
+}
+
 @media screen and (min-aspect-ratio: 82 / 42) and (max-aspect-ratio: 10 / 4) {
   main .referencesWraper {
     right: 0vw;
@@ -635,6 +654,12 @@ main #referencesText h1 {
   }
 }
 
+@media screen and (min-width: 576px) and (max-width: 992px) and (orientation: portrait) and (max-aspect-ratio: 10 / 19) {
+  main #referencesText h1 {
+    font-size: 4rem;
+  }
+}
+
 main #referencesText .movedRight {
   right: -4vw;
 }
@@ -682,8 +707,16 @@ main #referencesText .movedLeft {
 @media screen and (orientation: portrait) {
   main .referencesBox {
     width: 100vw;
-    -webkit-transform: translateY(7vh);
-            transform: translateY(7vh);
+    -webkit-transform: translateY(-7vh);
+            transform: translateY(-7vh);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) and (orientation: portrait) and (max-aspect-ratio: 10 / 19) {
+  main .referencesBox {
+    width: 100vw;
+    -webkit-transform: translateY(-4vh);
+            transform: translateY(-4vh);
   }
 }
 
@@ -732,6 +765,14 @@ main .referencesContent {
     margin-bottom: -26vh;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) and (orientation: portrait) and (max-aspect-ratio: 10 / 19) {
+  main .referencesContent {
+    -webkit-transform: translateY(-16vh);
+            transform: translateY(-16vh);
+    margin-bottom: 9vh;
   }
 }
 
@@ -1065,6 +1106,12 @@ main #contactText p, main #contactText a {
   }
   main #contactText i {
     font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) and (orientation: portrait) and (max-aspect-ratio: 10 / 19) {
+  main #contactText {
+    margin-bottom: 2vh !important;
   }
 }
 

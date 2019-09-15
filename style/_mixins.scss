@@ -53,8 +53,8 @@
         @content;
     }
 }
-// @mixin clearFix {
-//     content: "" !important;
-//     clear: both !important;
-//     display: block !important;
-// }
+@mixin mQmobileLargePortraid{ // from Bootstrap sm to Bootstrap lg (portrait)
+    @media screen and (min-width: 576px) and (max-width: 992px) and (orientation: portrait) and (max-aspect-ratio: 10/19){
+        @content;
+    }
+}
